@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    background-image: url('../media/aversitegusta.png');
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Navbar */
+.navbar{
+    background-color: #AA9174 !important;
+}
+  
+.navbar .nav-link {
+    color: #E4D4C5 !important;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #dbc37886;
+}
+
+.navbar .btn {
+    margin-left: 10px;
+    border-color: #E4D4C5;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2em;
+    background-color:  #4D4A46;
+    color: #E4D4C5;
+    padding: 2px 8px;
+    text-align: center;
+}
+
+/* Imagen de portada */
+.porti {
+    width: 100%;
+    height: auto;
+}
+
+/* Sección "Sobre mí" */
+
+.tittle-about{
+    color:#a19b96;
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 9%;
+    margin-bottom: 3%;
+
+
+}
+
+.textabout{
+    margin-bottom: 5%;
+    margin-top: 2%;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: justify;
+    font-size: 16px;
+    color: #472e08;
+}
+
+.abouth4{
+    color:#978f88;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 5%;
+}
+
+
+
+.img-fluid {
+   
+    border-radius: 3%;
+    margin-bottom: 10%;
+}
+
+/* Footer */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a77575;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+.footer-content .social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+}
+
+.footer-content h6 {
+    margin-top: 10px;
+}
+
+/*Estudios*/
+
+.tittle-study{
+    margin-bottom: 3%;
+    color:#94745b;
+    font-family: "Junge", cursive;
+}
+
+#studies, #courses {
+    padding: 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.studies-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.study-card {
+   
+    border-radius: 4%;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    color: #7C7878;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #7C7878;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px;
+   
+}
+
+.study-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 2%;
+}
+
+.courses-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-card {
+   
+    max-width: 80%;
+    padding: 10px;
+    text-align: center;
+    color: #7C7878;
+
+}
+
+/*responsive para estudios*/
+@media (max-width: 768px) {
+
+    .studies-container,
+    .courses-container {
+        display: block;
+    }
+
+    .study-card,
+    .course-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Subtitulados */
+.titulinsubti,
+.titlesub2,
+.text-2xl {
+    font-family: "Junge", cursive;
+    text-align: center;
+    color:#94745b;
+}
+
+.text-subti {
+    text-align: center;
+    margin-bottom: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #7C7878;
+    font-size: 18px;
+}
+
+#intro,
+#services,
+#pricing,
+#ooona {
+    margin-bottom: 2em;
+  
+   
+}
+
+#services {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+   
+    
+}
+
+.service {
+    flex: 1 1 200px;
+  
+    margin: 1em;
+    text-align: justify;
+    
+}
+
+.service img {
+    margin-bottom: 5%;
+    max-width: 25%;
+    height: auto;
+   transition: transform 0.3s ease;
+}
+.service img:hover {
+    transform: scale(1); /* Escalar el icono un 20% */
+    transform: rotate(20deg);
+}
+
+
+#pricing,
+#ooona {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;    
+}
+
+
+.card-subti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+   
+}
+
+.card img {
+    margin-bottom: 16px;
+    object-fit: cover;
+}
+
+.ooona-logo {
+    max-width: 120px;
+    height: auto;
+}
+
+h3{
+    text-align: center;
+   
+}
+
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 17px;
+}
+
+/* Responsive para servicios */
+@media (max-width: 768px) {
+    .card img {
+        margin-bottom: 20px;
+    }
+
+    #pricing,
+    #ooona {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #pricing,
+    #ooona {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card,
+    .pricing-card {
+        width: calc(50% - 1em);
+    }
+}
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+    #pricing {
+        flex-direction: row;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.card h4 {
+    margin-top: 16px;
+}
+
+.card ul,
+.card p {
+    text-align: left;
+    width: 100%;
+}
+
+/*Traducciones Públicas*/
+#public-translations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #7C7878;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px;
+    color: #7C7878;
+ 
+}
+
+#public-translations img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#public-translations h2 { 
+    font-family: "Junge", cursive;
+    color:#94745b;
+    font-size: 35px !important;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#public-translations p, #public-translations ul {
+    margin-top: 5%;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+
+.text-2xl{
+    font-family: "Junge", cursive;
+    text-align: left;
+   
+ }
+   
+
+#public-translations ul {
+    padding-left: 20px;
+}
+
+#public-translations li {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    #public-translations {
+        flex-direction: row;
+        padding: 40px;
+    }
+
+    #public-translations img {
+        max-width: 40%;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    #public-translations div {
+        max-width: 60%;
+    }
+
+    #public-translations h2 {
+        font-size: 3rem;
+    }
+}
