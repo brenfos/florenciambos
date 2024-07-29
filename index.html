@@ -4,15 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="home">Inicio</title>
+    <title>Florencia Ambos - Traductora Pública y Audiovisual</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +27,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html" data-lang="home">Inicio</a>
+                        <a class="nav-link" href="#inicio" data-lang="home">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/about.html" data-lang="about">Sobre mí</a>
+                        <a class="nav-link" href="#sobre-mi" data-lang="about">Sobre mí</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/studies.html" data-lang="studies">Estudios</a>
+                        <a class="nav-link" href="#estudios" data-lang="studies">Estudios</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
@@ -35,14 +41,12 @@
                             Servicios
                         </a>
                         <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <a class="dropdown-item" href="pages/subtitulados.html"
-                                data-lang="subtitles">Subtitulados</a>
-                            <a class="dropdown-item" href="pages/traducciones-publicas.html"
-                                data-lang="publicTranslations">Traducciones Públicas</a>
+                            <a class="dropdown-item" href="#subtitulados" data-lang="subtitles">Subtitulados</a>
+                            <a class="dropdown-item" href="#traducciones-publicas" data-lang="publicTranslations">Traducciones Públicas</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/contact.html" data-lang="contact">Contacto</a>
+                        <a class="nav-link" href="#contacto" data-lang="contact">Contacto</a>
                     </li>
                 </ul>
                 <div class="navbar-nav">
@@ -53,35 +57,268 @@
         </div>
     </nav>
 
+    <!-- Sección Inicio -->
+    <header class="hero-section">
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Florencia Ambos</h1>
+            <h2 class="color-change" data-lang="profesion">Traductora Pública y Audiovisual</h2>
+            <p data-lang="sponsor"></p></p>
+        
+        </div>
+    </div>
+</header>
 
-    <!-- Contenido Principal -->
-    <main class="container">
-        <div class="banner">
-            <img class="porti" src="./media/libroportada.png" alt="Portada del Libro">
-            <div class="banner-text">
-                <h1 data-lang="bannerTitle">FLORENCIA AMBOS</h1>
-                <h2 data-lang="bannerSubtitle">Traductora Pública y Audiovisual</h2>
-                <p data-lang="bannerText1">Traduce tus visiones al mundo.</p>
-                <p data-lang="bannerText2">Da vida a tus creaciones audiovisuales.</p>
+    <!-- Sección Sobre mí -->
+    <section id="sobre-mi" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h4 class="tittle-about" data-lang="abouttitle"></h4>
+                <p class="textabout" data-lang="abouttext">Soy traductora Pública y Audiovisual. Recibida en la Universidad CAECE de Mar del Plata en el año 2012, y desde entonces que me dedico activamente a la traducción.</p>
+                <h4 class="abouth4" data-lang="abouttext2">Experiencia</h4>
+                <p class="textabout" data-lang="abouttext3">He trabajado con diversas empresas y particulares ofreciendo servicios de traducción de alta calidad.</p>
+                <h4 class="abouth4" data-lang="abouttext4">Habilidades</h4>
+                <p class="textabout" data-lang="abouttext5">Traducción, Subtitulación, Localización de Software, Interpretación.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img class="img-fluid" src="./media/porfavor.png" alt="Sobre mí">
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Sección Estudios -->
+    <section id="estudios" class="container my-5">
+        <h2 class="tittle-study" data-lang="studies">Estudios</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="study-card text-center p-3 shadow-sm">
+                    <img src="./media/caece.jpg" alt="University logo" class="img-fluid rounded-circle mb-3">
+                    <h3 class="studietext"data-lang="caeceTitle1">Universidad CAECE</h3>
+                    <h3 class="studietext"data-lang="caeceTitle2">Mar del Plata, Argentina</h3>
+                    <p data-lang="swornTranslator" class="carreratitulo">Traductora Pública</p>
+                    <p data-lang="caeceDates1" class="inglespañol">Inglés - Español, 2008 - 2013</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="study-card text-center p-3 shadow-sm">
+                    <img src="./media/caece.jpg" alt="University logo" class="img-fluid rounded-circle mb-3">
+                    <h3 class="studietext" data-lang="caeceTitle1">Universidad CAECE Mar del Plata Argentina</h3>
+                    <h3 class="studietext"data-lang="caeceTitle2">Mar del Plata, Argentina</h3>
+                    <p data-lang="techTranslator" class="carreratitulo">Traductora Técnico-Científica</p>
+                    <p data-lang="caeceDates1" class="inglespañol">Inglés - Español, 2008 - 2012</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="study-card text-center p-3 shadow-sm">
+                    <img src="./media/bsas.jpg" alt="Association logo" class="img-fluid rounded-circle mb-3">
+                    <h3 class="studietext"data-lang="bsasTitle">Asociación de Traductores Públicos en Buenos Aires</h3>
+                    <p data-lang="swornTranslatorCourse" class="carreratitulo">Curso de Traductora Pública</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Sección Cursos-->
+    <section id="courses" class="container my-5">
+        <h2 class="title-courses" data-lang="courses"></h2>
+        <div class="courses-timeline">
+            <div class="course-item">
+                <div class="course-content">
+                    <div class="course-header">
+                        <div class="course-number">01</div>
+                    </div>
+                    <h3 class="course-title">Curso Introducción a Ooona</h3>
+                    <p class="course-instructor">Dictado por Damián Santilli</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-content">
+                    <div class="course-header">
+                        <div class="course-number">02</div>
+                    </div>
+                    <h3 class="course-title">Especialización en Subtitulado, niveles I y II</h3>
+                    <p class="course-instructor">Dictado por Damián Santilli</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-content">
+                    <div class="course-header">
+                        <div class="course-number">03</div>
+                    </div>
+                    <h3 class="course-title">Curso de Subtitulado y Doblaje</h3>
+                    <p class="course-instructor">Dictado por Silvina Pontrémoli</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-content">
+                    <div class="course-header">
+                        <div class="course-number">04</div>
+                    </div>
+                    <h3 class="course-title">Inglés para Traducciones Legales</h3>
+                    <p class="course-instructor">Dictado por Ricardo Chiessa</p>
+                </div>
+            </div>
+            <div class="course-item">
+                <div class="course-content">
+                    <div class="course-header">
+                        <div class="course-number">05</div>
+                    </div>
+                    <h3 class="course-title">III Jornadas Internacionales de Traducción e Interpretación</h3>
+                    <p class="course-instructor">Disertantes: Xosé Castro Roig, Liliana Bernardita Mariotto, Damián Santilli, Mariana Costa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Sección Subtitulados -->
+     <section class="container-fluid">
+    <section id="subtitulados" class="container my-5">
+        <h1 class="titulinsubti" data-lang="titlesub"></h1>
+        <p class="psubti" data-lang="contentsub"></p>
+        <h2 class="titlesub2" data-lang="titlesub2"></h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/peli.jpeg" alt="iconmovie">
+                    <p class="difsubti"data-lang="subtipelis">Películas</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/tv.jpeg" alt="icontv">
+                    <p class="difsubti" data-lang="subtitv">Programas de TV</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/documental.jpeg" alt="Subtitulado de documentales">
+                    <p class="difsubti" data-lang="subtidocu">Documentales</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/corpovid.jpeg" alt="iconcourse">
+                    <p class="difsubti"data-lang="videocorp">Videos Corporativos</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/interview.jpeg" alt="iconinterview">
+                    <p class="difsubti" data-lang="subtientre">Entrevistas</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/videopromo.jpeg" alt="iconpodcast">
+                    <p class="difsubti"data-lang="subtivideopromo">Videos Promocionales</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/ytb.jpeg" alt="iconvideoclip">
+                    <p class="difsubti"data-lang="subtiytb">YouTube</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service p-3 text-center shadow-sm">
+                    <img class="iconsubti img-fluid mb-3" src="./media/tuto.jpeg" alt="iconvideoclip">
+                    <p class="difsubti"data-lang="subtionline">Tutoriales en Línea</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="imgsubti"> <img class="imgsubti2"src="./media/subtitle.jpg" alt=""></div>
+</section>
+
+<!-- Cuánto cuesta un -->
+    <section class="container-fluid">
+        <section id="subtitulados" class="container my-5">
+            <h1 class="titulinsubti">Costos de un Proyecto Audiovisual</h1>
+            <p class="psubti">Los costos para un proyecto de subtitulado dependen de múltiples aspectos, como:</p>
+            <div class="cost-info">
+                <div class="cost-item">
+                    <h2>Duración del Video</h2>
+                    <p>El costo se calcula generalmente por minuto de video.</p>
+                </div>
+                <div class="cost-item">
+                    <h2>Calidad del Video</h2>
+                    <p>¿La calidad del sonido es buena o mala? ¿Hay interferencias en el sonido?</p>
+                </div>
+                <div class="cost-item">
+                    <h2>Vocabulario Técnico</h2>
+                    <p>Contenido con terminología específica que puede requerir investigación adicional o conocimientos aplicados.</p>
+                </div>
+                <div class="cost-item">
+                    <h2>Plazos</h2>
+                    <p>¿Qué tan urgente es tu proyecto? ¿Necesitas una entrega rápida? ¿El proyecto requiere trabajo durante el fin de semana?</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+  <!-- Sección Traducciones Públicas -->
+    <section id="traducciones-publicas" class="container my-5">
+        <h2 class="tradupubli" data-lang="tradutitle">Traducciones Públicas</h2>
+        <p class="ptradu" data-lang="ptradu1">
+            Una traducción pública es la traducción de un documento que, para que sea válido en la lengua meta, debe ser traducido por un traductor certificado, es decir, un traductor público.
+        </p>
+    
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h5 class="titletradu2" data-lang="tradutitle2">Ejemplos de documentos que requieren traducciones públicas:</h5>
+                <ul class="list-group">
+                    <li class="list-group-item" data-lang="certi">Certificados de nacimiento, de defunción o de matrimonio</li>
+                    <li class="list-group-item" data-lang="balance">Balances comerciales e informes de auditorías</li>
+                    <li class="list-group-item" data-lang="contrato">Contratos</li>
+                    <li class="list-group-item" data-lang="estatutos">Estatutos</li>
+                    <li class="list-group-item" data-lang="declajura">Declaraciones juradas</li>
+                    <li class="list-group-item" data-lang="diplo">Diplomas</li>
+                    <li class="list-group-item" data-lang="docuacad">Documentos académicos</li>
+                    <li class="list-group-item" data-lang="podnota">Poderes notariales</li>
+                </ul>
+            </div>
+            <div class="imgtras">
+                <img class="imgtras2" src="./media/traslate.jfif" alt="Imagen de traducción">
+            </div>
+        </div>
+    </section>
+    <!-- Sección Contacto -->
+   <!-- <section id="contacto" class="container my-5 text-center">
+        <h1 data-lang="contact">Contacto</h1>
+        <p>jfdkgjdkdjf.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="./media/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="./media/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                <img src="./media/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
+                <img src="./media/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </section>
+-->
     <!-- Footer -->
     <footer class="text-center">
         <div class="footer-content">
             <div class="social-icons">
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/facebook.png" alt="Facebook">
+                    <img src="./media/facebook.png" alt="Facebook">
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/instagram.png" alt="Instagram">
+                    <img src="./media/instagram.png" alt="Instagram">
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/linkedin.png" alt="LinkedIn">
+                    <img src="./media/linkedin.png" alt="LinkedIn">
                 </a>
                 <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer">
-                    <img src="../media/whatsapp.png" alt="WhatsApp">
+                    <img src="./media/whatsapp.png" alt="WhatsApp">
                 </a>
             </div>
             <h6>&copy; Florencia Ambos 2024</h6>

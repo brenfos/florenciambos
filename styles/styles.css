@@ -6,59 +6,156 @@
 
 body {
     font-family: 'PT Serif', serif;
-    background-image: url('../media/aversitegusta.png');
+    background-color: #F4F1E8 !important;
     margin: 0;
     padding: 0;
 }
 
 
+/* Estilo general del navbar */
+nav.navbar {
+    background-color: #9b4919be; /* Color de fondo del navbar */
+    font-family: "Radley", serif;
+    font-style: italic;
+    position: fixed; /* Fija el navbar en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
+    padding: 0 15px; /* Espaciado horizontal */
+}
 
-img {
-    max-width: 100%;
-    height: auto;
+/* Contenedor del navbar */
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el botón de menú y el contenido */
+}
+
+/* Estilo del toggler (botón de menú en dispositivos móviles) */
+.navbar-toggler {
+    border-color: #ffffff; /* Color del borde del botón de menú */
+}
+
+.navbar-toggler-icon {
+    background-image: url('path/to/your/icon.svg'); /* Icono del botón de menú */
+}
+
+/* Estilo para los elementos de navegación */
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 100%;
+}
+
+/* Espaciado entre los elementos de navegación */
+.nav-item {
+    margin: 0 10px; /* Ajusta el espaciado según sea necesario */
+}
+
+/* Estilo de los enlaces de navegación */
+.nav-link {
+    color: #ffffff !important; /* Color de texto blanco */
+    font-size: 18px;
+    padding: 15px 10px; /* Espaciado interno para los enlaces */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.nav-link:hover {
+    color: #b3aaaac5 !important; /* Color de texto al pasar el mouse */
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    background-color: #9B4819; /* Fondo del menú desplegable */
+    border: none; /* Elimina el borde del menú desplegable */
+}
+
+.dropdown-item {
+    color: #ffffff; /* Color de texto blanco para los elementos del dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #7e3f12; /* Color de fondo al pasar el mouse */
+    color: #ffffff;
+}
+
+/* Estilo para los botones de la derecha */
+.navbar-nav .btn {
+    background-color: #ffffff; /* Fondo blanco para los botones */
+    color: #9B4819; /* Color del texto del botón */
+    border: none; /* Sin borde para los botones */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px;
+    padding: 5px 10px; /* Espaciado interno */
+    margin: 0 5px; /* Espaciado horizontal entre los botones */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+}
+
+.navbar-nav .btn:hover {
+    background-color: #9B4819; /* Fondo del botón al pasar el mouse */
+    color: #ffffff; /* Color del texto del botón al pasar el mouse */
+}
+
+
+/*Principal*/
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ajusta esta altura según tus necesidades */
+}
+
+.hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: url('/media/ofi1.jfif') no-repeat center center;
+    background-size: cover; /* Cover ajusta la imagen para cubrir el área sin distorsionar */
+    background-attachment: fixed; /* Esto asegura que la imagen de fondo no se mueva con el contenido */
+    background-position: center;
+}
+
+.hero-text {
+    font-family: "Radley", serif;
+    font-style: italic;
+    text-align: center;
+    color:#9B4819;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo del texto semitransparente */
     border-radius: 8px;
 }
 
-/* Navbar */
-.navbar{
-    background-color: #AA9174 !important;
+.hero-text h1, .hero-text h2, .hero-text p {
+    margin: 0.5em 0;
 }
+
+.color-change {
+    font-style: normal;
+    font-size: 35px;
+    animation: colorChange 1s infinite;
+  }
   
-.navbar .nav-link {
-    color: #E4D4C5 !important;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-.navbar .nav-link:hover {
-    color: #dbc37886;
-}
-
-.navbar .btn {
-    margin-left: 10px;
-    border-color: #E4D4C5;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.2em;
-    background-color:  #4D4A46;
-    color: #E4D4C5;
-    padding: 2px 8px;
-    text-align: center;
-}
-
-/* Imagen de portada */
-.porti {
-    width: 100%;
-    height: auto;
-}
+  @keyframes colorChange {
+    50% {
+      color: #9B4819;
+    }
+         100% {
+      color: rgb(0, 0, 0);
+    }
+  }
+  
 
 /* Sección "Sobre mí" */
 
 .tittle-about{
-    color:#a19b96;
-    font-family: "Playfair Display", serif;
+    color:#9B4819;
+    font-family: "Radley", serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     margin-top: 9%;
     margin-bottom: 3%;
 
@@ -68,16 +165,20 @@ img {
 .textabout{
     margin-bottom: 5%;
     margin-top: 2%;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Carlito", sans-serif;
+   font-weight: 400;
+ font-style: normal;
+  
+      
     text-align: justify;
-    font-size: 16px;
-    color: #472e08;
+    font-size: 20px;
+    color: #191919;
 }
 
 .abouth4{
-    color:#978f88;
-    font-family: "Playfair Display", serif;
-    font-size: 30px;
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 35px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
@@ -118,15 +219,19 @@ img {
 /*Estudios*/
 
 .tittle-study{
+    margin-top: 8%;
     margin-bottom: 3%;
-    color:#94745b;
-    font-family: "Junge", cursive;
+    text-align: center;
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 45px;
 }
 
 #studies, #courses {
-    padding: 20px;
+    padding: 15px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: "Carlito", sans-serif;
+    font-size: 18px;
 }
 
 .studies-container {
@@ -134,21 +239,22 @@ img {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    
+}
+.studietext{
+    font-family: "Radley", serif;
 }
 
 .study-card {
-   
     border-radius: 4%;
     padding: 15px;
-    width: 300px;
+    width: 360px;
     text-align: center;
-    color: #7C7878;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #7C7878;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1300px;
-   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.study-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .study-card img {
@@ -158,21 +264,94 @@ img {
     margin-bottom: 2%;
 }
 
-.courses-container {
+.carreratitulo{
+    font-style: italic;
+    font-size: 20px;
+}
+
+.inglespañol{
+    font-size: 15px;
+}
+
+¨/*Cursos*/
+
+.title-courses {
+    margin-top: 8%;
+    margin-bottom: 3%;
+    text-align: center;
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 45px;
+}
+
+.courses-timeline {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    padding: 0 15px;
+   align-items: center;
+}
+
+
+.course-item {
+    position: relative;
+    width: 59%;
+    padding: 2px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.course-card {
-   
-    max-width: 80%;
+.course-content {
     padding: 10px;
+    flex: 1;
     text-align: center;
-    color: #7C7878;
-
 }
+
+.course-header {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #9B4819;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.course-title {
+    font-family: "Radley", serif;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.course-instructor {
+    font-family: "Carlito", sans-serif;
+    font-size: 16px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .course-item {
+        padding: 15px;
+        flex-direction: column;
+    }
+    .course-header {
+        left: 0;
+        top: -30px;
+        transform: none;
+    }
+}
+
 
 /*responsive para estudios*/
 @media (max-width: 768px) {
@@ -190,52 +369,52 @@ img {
 }
 
 /* Subtitulados */
-.titulinsubti,
-.titlesub2,
-.text-2xl {
-    font-family: "Junge", cursive;
+
+
+.titulinsubti{
+    margin-top: 8%;
+    margin-bottom: 3%;
     text-align: center;
-    color:#94745b;
-}
-
-.text-subti {
-    text-align: center;
-    margin-bottom: 5%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #7C7878;
-    font-size: 18px;
-}
-
-#intro,
-#services,
-#pricing,
-#ooona {
-    margin-bottom: 2em;
-  
-   
-}
-
-#services {
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-   
-   
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 45px;
     
 }
 
+.psubti{
+    font-family: "Carlito", sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 3%;
+}
+
+.titlesub2{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 35px;
+}
+
+.difsubti{
+    font-family: "Carlito", sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+
 .service {
     flex: 1 1 200px;
-  
-    margin: 1em;
+
     text-align: justify;
     
 }
 
 .service img {
     margin-bottom: 5%;
-    max-width: 25%;
+    max-width: 35%;
     height: auto;
    transition: transform 0.3s ease;
 }
@@ -244,44 +423,19 @@ img {
     transform: rotate(20deg);
 }
 
-
-#pricing,
-#ooona {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;    
-}
-
-
-.card-subti {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 8px;
-   
-}
-
-.card img {
-    margin-bottom: 16px;
-    object-fit: cover;
-}
-
-.ooona-logo {
-    max-width: 120px;
-    height: auto;
-}
-
-h3{
+.imgsubti{
     text-align: center;
-   
+    max-height: 20%;
+    width: auto;
+    border-radius: 1%;
+    
+}
+.imgsubti2{
+    max-width: 50%;
+    height: auto;
+    border-radius: 3%;
 }
 
-p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 17px;
-}
 
 /* Responsive para servicios */
 @media (max-width: 768px) {
@@ -350,77 +504,184 @@ p{
 }
 
 /*Traducciones Públicas*/
-#public-translations {
+
+/* Estilos para la sección de Traducciones Públicas */
+#traducciones-publicas {
+    background-color: #F4F1E8;
+    color: #9B4819;
+    font-family: 'Carlito', sans-serif;
+}
+
+.tradupubli {
+    margin-top: 8%;
+    margin-bottom: 3%;
+    text-align: center;
+    color:#9B4819;
+    font-family: "Radley", serif;
+    font-size: 45px;
+}
+
+.ptradu {
+    margin-bottom: 20px;
+    font-family: 'Carlito', sans-serif;
+    color: #191919;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.titletradu2 {
+    font-family: 'Radley', serif;
+    color: #9B4819;
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.content-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #7C7878;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 1300px;
-    color: #7C7878;
- 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-#public-translations img {
-    max-width: 100%;
+.text-content {
+    flex: 1;
+    min-width: 280px;
+    margin-right: 20px;
+}
+
+.imgtras {
+    flex: 0 0 auto;
+    max-width: 700px;
+    margin-top: 7%;
+}
+
+.imgtras2 {
+    width: 100%;
+    height: auto;
     border-radius: 8px;
-    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#public-translations h2 { 
-    font-family: "Junge", cursive;
-    color:#94745b;
-    font-size: 35px !important;
-    margin-bottom: 20px;
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content, .imgtras {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+}
+
+
+/* Estilo general de la lista */
+.list-group {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    max-width: 500px; /* Ajusta el ancho máximo si es necesario */
+    margin: auto; /* Centra la lista horizontalmente */
+}
+
+/* Estilo de los elementos de la lista */
+.list-group-item {
+    background-color: #f9f9f9; /* Fondo claro para los elementos de la lista */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado entre los elementos de la lista */
+    font-family: "Carlito", sans-serif;
+    font-size: 18px; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
     text-align: center;
 }
 
-#public-translations p, #public-translations ul {
-    margin-top: 5%;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+/* Estilo al pasar el ratón sobre los elementos */
+.list-group-item:hover {
+    background-color: #9b4919ab; /* Fondo más oscuro al pasar el ratón */
+    color: #ddd;
+    transform: translateY(-2px); /* Efecto de elevación */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+/* Estilo para el primer elemento de la lista */
+.list-group-item:first-child {
+    margin-top: 10px; /* Espaciado superior para el primer elemento */
+}
+
+/* Estilo para el último elemento de la lista */
+.list-group-item:last-child {
+    margin-bottom: 0; /* Elimina el margen inferior del último elemento */
+}
+
+.imgtras{
+    text-align: center;
+   
+    
+}
+.imgtras2{
+
+    width: 50%; /* O el tamaño que prefieras */
+    height: auto;
+    border-radius: 1%;
+}
+
+/*Cuánto cuesta un proyecto audiovisual*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1 {
+    font-family: 'Radley', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #9B4819;
+    margin-bottom: 1rem;
+}
+
+.psubti {
+    font-size: 1.125rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Estilos de la información de costos */
+.cost-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1rem;
+}
+
+.cost-item {
+    background: #cfcfcf6e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 105%;
+}
+
+.cost-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cost-item h2 {
+    font-family: 'Radley', serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #9B4819;
+}
+
+.cost-item p {
+    font-size: 15px;
+    margin: 0;
     text-align: justify;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 18px;
-}
 
-
-.text-2xl{
-    font-family: "Junge", cursive;
-    text-align: left;
-   
- }
-   
-
-#public-translations ul {
-    padding-left: 20px;
-}
-
-#public-translations li {
-    margin-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    #public-translations {
-        flex-direction: row;
-        padding: 40px;
-    }
-
-    #public-translations img {
-        max-width: 40%;
-        margin-bottom: 0;
-        margin-right: 20px;
-    }
-
-    #public-translations div {
-        max-width: 60%;
-    }
-
-    #public-translations h2 {
-        font-size: 3rem;
-    }
 }
