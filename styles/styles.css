@@ -14,12 +14,12 @@ body {
 
 /* Estilo general del navbar */
 nav.navbar {
-    background-color: #9b4919be; /* Color de fondo del navbar */
+    background-color:  #9B4819; /* Color de fondo del navbar */
     font-family: "Radley", serif;
-    font-style: italic;
     position: fixed; /* Fija el navbar en la parte superior */
     top: 0;
     width: 100%;
+    height: 6%;
     z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
     padding: 0 15px; /* Espaciado horizontal */
 }
@@ -33,11 +33,13 @@ nav.navbar {
 
 /* Estilo del toggler (botón de menú en dispositivos móviles) */
 .navbar-toggler {
-    border-color: #ffffff; /* Color del borde del botón de menú */
+    
+    background-color:  #9B4819;
+    border-color: #ecd8d8; /* Color del borde del botón de menú */
 }
 
 .navbar-toggler-icon {
-    background-image: url('path/to/your/icon.svg'); /* Icono del botón de menú */
+    background-image: url(''); /* Icono del botón de menú */
 }
 
 /* Estilo para los elementos de navegación */
@@ -68,7 +70,7 @@ nav.navbar {
 
 /* Estilo para el menú desplegable */
 .dropdown-menu {
-    background-color: #9B4819; /* Fondo del menú desplegable */
+    background-color: #b49786; /* Fondo del menú desplegable */
     border: none; /* Elimina el borde del menú desplegable */
 }
 
@@ -101,60 +103,280 @@ nav.navbar {
 
 /*Principal*/
 .hero-section {
-    position: relative;
-    width: 100%;
-    height: 80vh; /* Ajusta esta altura según tus necesidades */
-}
-
-.hero-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background: url('/media/ofi1.jfif') no-repeat center center;
-    background-size: cover; /* Cover ajusta la imagen para cubrir el área sin distorsionar */
-    background-attachment: fixed; /* Esto asegura que la imagen de fondo no se mueva con el contenido */
-    background-position: center;
-}
-
-.hero-text {
-    font-family: "Radley", serif;
-    font-style: italic;
     text-align: center;
-    color:#9B4819;
-    max-width: 600px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.6); /* Fondo del texto semitransparente */
-    border-radius: 8px;
+    padding: 130px;
+    position: relative;
+    overflow: hidden; /* Para asegurar que las animaciones no se salgan del contenedor */
+    animation: fadeInBackground 3s infinite alternate;
 }
 
-.hero-text h1, .hero-text h2, .hero-text p {
-    margin: 0.5em 0;
+.circle {
+    width: 80px;
+    height: 60px;
+    border: 5px solid #9B4819; /* Primer borde */
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-color: #F4F1E8; /* Color de fondo del círculo */
+    position: relative;
+    animation: circleBounce 2s infinite ease-in-out, rotateCircle 6s infinite linear, circleShadow 3s infinite alternate;
 }
 
-.color-change {
-    font-style: normal;
-    font-size: 35px;
-    animation: colorChange 1s infinite;
-  }
-  
-  @keyframes colorChange {
-    50% {
-      color: #9B4819;
+.circle::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #000; /* Segundo borde */
+    animation: borderGlow 2s infinite alternate;
+}
+
+@keyframes circleBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes rotateCircle {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes circleShadow {
+    0%, 100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
+    50% { box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+}
+
+@keyframes borderGlow {
+    0%, 100% { border-color: #000; }
+    50% { border-color:  #314028; }
+}
+
+.hero-text h1 {
+    font-family: 'Radley', serif;
+    font-size: 8rem;
+    margin: 0;
+    color: #191919;
+    opacity: 0;
+    animation: fadeIn 2s forwards 0.5s, textBlink 3s infinite, textShadow 2s infinite alternate;
+}
+
+.highlight {
+    color: #9B4819;
+    font-style: italic;
+    display: inline-block;
+    transform: translateX(-10px);
+    animation: slideIn 1s forwards 1s, highlightPulse 4s infinite, highlightGlow 3s infinite alternate;
+}
+
+.profession {
+    font-family: 'Carlito', sans-serif;
+    font-size: 2.7rem;
+    margin: 20px 0;
+    color: #191919;
+    animation: fadeIn 2s forwards 1.5s, professionGlow 2s infinite alternate;
+}
+
+.description {
+    font-family: 'Carlito', sans-serif;
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #191919;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s, textBlink 3s infinite;
+}
+
+.specialty {
+    font-family: 'Radley', serif;
+    font-size: 2rem;
+    margin-top: 30px;
+    color: #9B4819;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2.5s;
+    position: relative;
+    display: inline-block;
+}
+
+.underline {
+    width: 30%;
+    height: 2px;
+    background-color: #9B4819;
+    margin: 10px auto 0;
+    animation: underlineSlideIn 1s forwards 3s;
+}
+
+.decorations .decoration {
+    position: absolute;
+    background-color: #9B4819;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: decorationBounce 3s infinite, decorationFade 6s infinite;
+}
+
+.decoration-1 {
+    width: 10px;
+    height: 10px;
+    top: 10%;
+    left: 5%;
+    animation: sparkleAnimation 4s infinite alternate;
+}
+
+.decoration-2 {
+    width: 15px;
+    height: 15px;
+    top: 40%;
+    left: 90%;
+    animation: sparkleAnimation 3s infinite alternate;
+}
+
+.decoration-3 {
+    width: 20px;
+    height: 20px;
+    top: 75%;
+    left: 20%;
+    animation: sparkleAnimation 5s infinite alternate;
+}
+
+.sparkle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    opacity: 0;
+    animation: sparkleAnimation 3s infinite alternate;
+}
+
+.sparkle-1 {
+    width: 8px;
+    height: 8px;
+    top: 25%;
+    left: 15%;
+}
+
+.sparkle-2 {
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    left: 70%;
+}
+
+.sparkle-3 {
+    width: 12px;
+    height: 12px;
+    top: 80%;
+    left: 35%;
+}
+
+.wave {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    animation: waveAnimation 6s infinite linear;
+}
+
+.wave-1 {
+    width: 150px;
+    height: 150px;
+    top: -30%;
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.wave-2 {
+    width: 100px;
+    height: 100px;
+    bottom: -20%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    to { transform: translateX(0); }
+}
+
+@keyframes underlineSlideIn {
+    from { width: 0; }
+    to { width: 30%; }
+}
+
+@keyframes decorationBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes textBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes highlightPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes decorationFade {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+@keyframes textShadow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 0, 0, 0); }
+    50% { text-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+}
+
+@keyframes highlightGlow {
+    0%, 100% { color: #9B4819; }
+    50% { color: #db9075; }
+}
+
+@keyframes professionGlow {
+    0%, 100% { color: #191919; }
+    50% { color: #e0825f; }
+}
+
+@keyframes sparkleAnimation {
+    0% { transform: scale(1); opacity: 0; }
+    50% { transform: scale(1.5); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+@keyframes waveAnimation {
+    0% { transform: scale(0); opacity: 0.5; }
+    50% { transform: scale(1); opacity: 0; }
+    100% { transform: scale(0); opacity: 0.5; }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
     }
-         100% {
-      color: rgb(0, 0, 0);
+
+    .profession, .description, .specialty {
+        font-size: 0.9rem;
     }
-  }
-  
+
+    .circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .decorations .decoration, .sparkle, .wave {
+        display: none; /* Hide decorations on smaller screens */
+    }
+}
 
 /* Sección "Sobre mí" */
 
 .tittle-about{
     color:#9B4819;
     font-family: "Radley", serif;
-    text-align: center;
+    text-align: left;
     font-size: 35px;
     margin-top: 9%;
     margin-bottom: 3%;
@@ -163,14 +385,12 @@ nav.navbar {
 }
 
 .textabout{
-    margin-bottom: 5%;
-    margin-top: 2%;
-    font-family: "Carlito", sans-serif;
+   margin-bottom: 5%;
+   margin-top: 2%;
+   font-family: "Carlito", sans-serif;
    font-weight: 400;
- font-style: normal;
-  
-      
-    text-align: justify;
+   font-style: normal;
+   text-align: justify;
     font-size: 20px;
     color: #191919;
 }
@@ -181,7 +401,7 @@ nav.navbar {
     font-size: 35px;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
+    text-align: left;
     margin-bottom: 1%;
     margin-top: 5%;
 }
@@ -218,31 +438,49 @@ nav.navbar {
 
 /*Estudios*/
 
-.tittle-study{
+.tittle-study {
     margin-top: 8%;
     margin-bottom: 3%;
     text-align: center;
-    color:#9B4819;
+    color: #9B4819;
     font-family: "Radley", serif;
     font-size: 45px;
+    animation: pulse 2s infinite; /* Animación constante */
 }
 
-#studies, #courses {
-    padding: 15px;
-    text-align: center;
-    font-family: "Carlito", sans-serif;
-    font-size: 18px;
+@keyframes pulse {
+    0% {
+        color: #9B4819;
+        transform: scale(1);
+    }
+    50% {
+        color: #D8B4A6; /* Puedes cambiar el color según tu diseño */
+        transform: scale(1.1);
+    }
+    100% {
+        color: #9B4819;
+        transform: scale(1);
+    }
 }
 
-.studies-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    
-}
-.studietext{
+.study-card h3.studietext {
     font-family: "Radley", serif;
+    animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .study-card {
@@ -251,7 +489,9 @@ nav.navbar {
     width: 360px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Necesario para la línea separadora */
 }
+
 .study-card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -264,15 +504,23 @@ nav.navbar {
     margin-bottom: 2%;
 }
 
-.carreratitulo{
+.carreratitulo {
     font-style: italic;
     font-size: 20px;
 }
 
-.inglespañol{
+.inglespañol {
     font-size: 15px;
 }
 
+.separator {
+    width: 80%; /* Ajusta el ancho según sea necesario */
+    height: 2px;
+    background-color: #9B4819; /* Color de la línea separadora */
+    margin: 10px auto; /* Centra la línea y alinea con las demás tarjetas */
+    position: relative; /* Alinea la línea en relación con la tarjeta */
+    top: 10px; /* Ajusta según sea necesario para alinear verticalmente */
+}
 ¨/*Cursos*/
 
 .title-courses {
@@ -372,10 +620,10 @@ nav.navbar {
 
 
 .titulinsubti{
-    margin-top: 8%;
+   margin-top: 2%;
     margin-bottom: 3%;
     text-align: center;
-    color:#9B4819;
+    color:#F4F1E8;
     font-family: "Radley", serif;
     font-size: 45px;
     
@@ -392,7 +640,7 @@ nav.navbar {
     margin-top: 2%;
     margin-bottom: 2%;
     text-align: center;
-    color:#9B4819;
+    color:#F4F1E8;
     font-family: "Radley", serif;
     font-size: 35px;
 }
@@ -436,6 +684,12 @@ nav.navbar {
     border-radius: 3%;
 }
 
+.custom-bg {
+    background-color: #9B4819; /* Puedes cambiar esto por el color que prefieras */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 
 /* Responsive para servicios */
 @media (max-width: 768px) {
@@ -533,7 +787,7 @@ nav.navbar {
     font-family: 'Radley', serif;
     color: #9B4819;
     margin-top: 20px;
-    font-size: 23px;
+    font-size: px;
 }
 
 .content-wrapper {
