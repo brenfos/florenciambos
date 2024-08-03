@@ -11,35 +11,23 @@ body {
     padding: 0;
 }
 
-
-/* Estilo general del navbar */
+/* NAVBAR */
 nav.navbar {
-    background-color:  #9B4819; /* Color de fondo del navbar */
+    background-color: #9B4819;
     font-family: "Radley", serif;
-    position: fixed; /* Fija el navbar en la parte superior */
+    position: fixed; /* Fijar navbar en la parte superior */
     top: 0;
     width: 100%;
-    height: 6%;
-    z-index: 1000; /* Asegura que el navbar esté por encima de otros elementos */
-    padding: 0 15px; /* Espaciado horizontal */
+    height: auto; /* Ajuste de altura automático */
+    z-index: 1000;
+    padding: 0 15px;
 }
 
 /* Contenedor del navbar */
 .navbar .container-fluid {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espacio entre el botón de menú y el contenido */
-}
-
-/* Estilo del toggler (botón de menú en dispositivos móviles) */
-.navbar-toggler {
-    
-    background-color:  #9B4819;
-    border-color: #ecd8d8; /* Color del borde del botón de menú */
-}
-
-.navbar-toggler-icon {
-    background-image: url(''); /* Icono del botón de menú */
+    justify-content: space-between;
 }
 
 /* Estilo para los elementos de navegación */
@@ -100,8 +88,132 @@ nav.navbar {
     color: #ffffff; /* Color del texto del botón al pasar el mouse */
 }
 
+/* Cambia el color del icono de hamburguesa a blanco y ajusta su tamaño */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
 
-/*Principal*/
+.navbar-toggler-icon {
+    width: 30px;
+    height: 22px;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.navbar-toggler-icon::before {
+    top: 0;
+}
+
+.navbar-toggler-icon span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 5px 0;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        padding: 10px 5px;
+    }
+
+    .navbar-nav .btn {
+        margin: 5px;
+        display: inline-block;
+    }
+    
+    .navbar-nav .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .btn {
+        margin: 0 5px;
+    }
+}
+
+
+/*HOME*/
+
+.brush-container {
+    width: 350px; /* Mantiene el ancho para abarcar mejor la palabra */
+    height: 200px; /* Aumenta la altura para abarcar mejor la palabra */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes drawPath {
+    0% {
+        stroke-dasharray: 0, 950;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        stroke-dasharray: 950, 0;
+        animation-timing-function: ease-out;
+    }
+}
+
+#brushPath {
+    stroke-dasharray: 950, 950;
+    animation: drawPath 2s linear infinite;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-width: 2;
+    filter: url(#strokeEffect);
+}
+
+@media (max-width: 768px) {
+    .brush-container {
+        width: 150%; /* Ajusta el ancho del SVG para pantallas más pequeñas */
+        height: auto;
+    }
+
+    #brushPath {
+        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
+    }
+}
 .hero-section {
     margin-top: 100px;
     text-align: center;
@@ -372,7 +484,7 @@ nav.navbar {
     }
 }
 
-/* Sección "Sobre mí" */
+/*ABOUT ME*/
 
 .tittle-about{
     color:#9B4819;
@@ -416,11 +528,10 @@ nav.navbar {
 }
 
 
-/*ESTUDIOS*/
-/* Contenedor de fondo */
+/*EDUCATION*/
 .background-container {
     background-color: #c5a883;
-    padding: 20px 0; /* Espaciado para las secciones */
+    padding: 20px 0;
     width: 100%;
     box-sizing: border-box;
 }
@@ -442,7 +553,7 @@ nav.navbar {
         transform: scale(1);
     }
     50% {
-        color: #D8B4A6; /* Color de resaltado */
+        color: #D8B4A6; 
         transform: scale(1.1);
     }
     100% {
@@ -457,8 +568,8 @@ nav.navbar {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #c5a883; /* Fondo de la tarjeta */
-    color: #9B4819; /* Color del texto en la tarjeta */
+    background-color: #c5a883;
+    color: #9B4819; 
     margin: 20px 0;
 }
 
@@ -507,7 +618,7 @@ nav.navbar {
     }
 }
 
-/*CURSOS*/
+/*COURSES*/
 .title-courses {
     margin-bottom: 3%;
     text-align: center;
@@ -580,6 +691,7 @@ nav.navbar {
 @media (max-width: 768px) {
     .course-item {
         padding-left: 60px; /* Reducir espacio para dispositivos pequeños */
+        margin-bottom: 0px;
     }
 
     .course-date {
@@ -587,7 +699,7 @@ nav.navbar {
         height: 50px;
         line-height: 50px;
         font-size: 14px;
-        left: -35px; /* Ajusta según el nuevo tamaño de la línea */
+        left: 5px; /* Ajusta según el nuevo tamaño de la línea */
     }
 
     .course-content {
@@ -664,31 +776,20 @@ nav.navbar {
 
 
 
-/* Responsive para servicios */
-@media (max-width: 768px) {
-    .card img {
-        margin-bottom: 20px;
-    }
+/* Responsive ImgSubti*/
 
-    #pricing,
-    #ooona {
-        flex-direction: column;
-    }
-}
 
 @media (min-width: 768px) {
-
-    #pricing,
-    #ooona {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .card,
-    .pricing-card {
-        width: calc(50% - 1em);
-    }
+.imgsubti{
+    max-width: 100%; 
+    height: auto;   
 }
+}
+.imgsubti2{
+    max-width: 100%; 
+    height: auto;    
+}
+
 
 /*CUÁNTO CUESTA UN PROYECTO AUDIOVISUAL*/
 .container {
@@ -761,6 +862,7 @@ nav.navbar {
     color: #F4F1E8; 
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: justify;
 }
 
 .content-wrapper {
@@ -802,6 +904,7 @@ nav.navbar {
 
 /*SECCIÓN IMÁGENES*/
 .bgimage {
+    background-color: #9b4819;
     width: 100%;
     height: 100vh; /* La sección ocupará toda la altura de la ventana */
     background-image: url('/media/backgroundimg.png'); /* Cambia esto por la ruta de tu imagen */
@@ -817,6 +920,14 @@ nav.navbar {
     box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+    .bgimage {
+        background-size: contain; /* Ajusta la imagen para que sea completamente visible */
+        height: 300px;
+    }
+}
+
+
 
 /*CONTACTO*/
 #contacto-wrapper {
@@ -827,6 +938,10 @@ nav.navbar {
     position: relative;
     padding: 40px 0;
     overflow: hidden;
+}
+
+.pcontacto{
+    font-size: 12px;
 }
 
 #contacto {
