@@ -176,11 +176,11 @@ nav.navbar {
 /*HOME*/
 
 .brush-container {
-    width: 350px; /* Mantiene el ancho para abarcar mejor la palabra */
-    height: 200px; /* Aumenta la altura para abarcar mejor la palabra */
+    width: 450px; /* Mantiene el ancho para abarcar mejor la palabra */
+    height: 250px; /* Aumenta la altura para abarcar mejor la palabra */
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 37%;
+    left: 67%;
     transform: translate(-50%, -50%);
 }
 
@@ -204,47 +204,15 @@ nav.navbar {
     filter: url(#strokeEffect);
 }
 
-@media (max-width: 768px) {
-    .brush-container {
-        width: 150%; /* Ajusta el ancho del SVG para pantallas más pequeñas */
-        height: auto;
-    }
-
-    #brushPath {
-        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
-    }
-}
 .hero-section {
     margin-top: 100px;
     text-align: center;
     padding: 130px;
     position: relative;
-    overflow: hidden; /* Para asegurar que las animaciones no se salgan del contenedor */
-    animation: fadeInBackground 3s infinite alternate;
+    overflow: hidden;
+   
 }
 
-.circle {
-    width: 80px;
-    height: 60px;
-    border: 5px solid #9B4819; /* Primer borde */
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    background-color: #F4F1E8; /* Color de fondo del círculo */
-    position: relative;
-    animation: circleBounce 2s infinite ease-in-out, rotateCircle 6s infinite linear, circleShadow 3s infinite alternate;
-}
-
-.circle::before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 5px solid #000; /* Segundo borde */
-    animation: borderGlow 2s infinite alternate;
-}
 
 @keyframes circleBounce {
     0%, 100% { transform: translateY(0); }
@@ -271,24 +239,18 @@ nav.navbar {
     font-size: 8rem;
     margin: 0;
     color: #191919;
-    opacity: 0;
-    animation: fadeIn 2s forwards 0.5s, textBlink 3s infinite, textShadow 2s infinite alternate;
 }
 
-.highlight {
+.highlight{
     color: #9B4819;
-    font-style: italic;
-    display: inline-block;
-    transform: translateX(-10px);
-    animation: slideIn 1s forwards 1s, highlightPulse 4s infinite, highlightGlow 3s infinite alternate;
-}
 
+}
 .profession {
     font-family: 'Carlito', sans-serif;
     font-size: 2.7rem;
     margin: 20px 0;
     color: #191919;
-    animation: fadeIn 2s forwards 1.5s, professionGlow 2s infinite alternate;
+
 }
 
 .description {
@@ -403,6 +365,65 @@ nav.navbar {
     right: 10%;
     animation-delay: 3s;
 }
+
+
+.logo-container {
+    position: absolute;
+    top: 80px;
+    left: 45%;
+    width: 120px; 
+    height: auto;
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .profession {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .description {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .specialty {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .underline {
+        width: 70%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+
+    .logo-container {
+        top: 2px; /* Ajusta la posición del logo en pantallas más pequeñas */
+        width: 60px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+    }
+
+    .brush-container {
+        width: 30%; /* Ajusta el ancho del SVG para pantallas más pequeñas */
+        height: auto;
+        top: 33%;
+        left: 72%;
+    }
+
+    #brushPath {
+        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
+    }
+}
+
+
 
 /* Animaciones */
 @keyframes fadeIn {
@@ -685,7 +706,7 @@ nav.navbar {
 .course-instructor {
     font-family: "Carlito", sans-serif;
     font-size: 14px;
-    color: #cacacad3;
+    color: #ffffffd3;
 }
 
 @media (max-width: 768px) {
