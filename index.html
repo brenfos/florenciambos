@@ -18,43 +18,60 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio" data-lang="home"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobre-mi" data-lang="about"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#estudios" data-lang="studies"></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="services"></a>
-                        <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <a class="dropdown-item" href="#subtitulados" data-lang="subtitles"></a>
-                            <a class="dropdown-item" href="#traducciones-publicas" data-lang="publicTranslations"></a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto" data-lang="contact"></a>
-                    </li>
-                </ul>
-                <div class="navbar-nav btn-container">
-                    <button id="esButton" class="btn btn-primary nav-item" data-lang="es">ES</button>
-                    <button id="enButton" class="btn btn-primary nav-item" data-lang="en">EN</button>
-                </div>
-            </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#inicio" data-lang="home">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobre-mi" data-lang="about">Sobre Mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#estudios" data-lang="studies">Estudios</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-lang="services">Servicios</a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#subtitulados" data-lang="subtitles">Subtitulados</a>
+                        <a class="dropdown-item" href="#traducciones-publicas" data-lang="publicTranslations">Traducciones Públicas</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto" data-lang="contact">Contacto</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+        <div class="btn-container">
+            <button id="esButton" class="btn nav-item" data-lang="es">ES</button>
+            <button id="enButton" class="btn nav-item" data-lang="en">EN</button>
+        </div>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    // JavaScript to toggle the responsive navbar
+    $(document).ready(function () {
+        $('.navbar-toggler').click(function () {
+            $('.navbar-nav').toggleClass('responsive');
+        });
+        $('.nav-link').click(function () {
+            if ($(window).width() < 768) {
+                $('.navbar-nav').removeClass('responsive');
+                $('.navbar-collapse').collapse('hide');
+            }
+        });
+    });
+</script>
+
     
     <!-- Sección Inicio -->
     <header class="hero-section">
@@ -109,7 +126,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="study-card text-center p-3 shadow-sm">
-                        <img src="./media/caecece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
+                        <img src="./media/caece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
                         <h3 class="studietext" data-lang="caeceTitle1"></h3>
                         <h3 class="studietext" data-lang="caeceTitle2"></h3>
                         <hr>
@@ -120,7 +137,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="study-card text-center p-3 shadow-sm">
-                        <img src="./media/caecece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
+                        <img src="./media/caece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
                         <h3 class="studietext" data-lang="caeceTitle1"></h3>
                         <h3 class="studietext" data-lang="caeceTitle2"></h3>
                         <div class="separator"></div>
@@ -131,7 +148,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="study-card text-center p-3 shadow-sm">
-                        <img src="./media/bsas.png" alt="Association logo" class="img-fluid rounded-circle mb-3">
+                        <img src="./media/ctpba.png" alt="Association logo" class="img-fluid rounded-circle mb-3">
                         <h3 class="studietext" data-lang="bsasTitle" style="margin-bottom: 23px;"></h3>
                         <div class="separator"></div>
                         <hr>

@@ -13,67 +13,72 @@ body {
 
 /* NAVBAR */
 nav.navbar {
-    background-color: #9B4819;
+    background-color: rgba(155, 72, 25, 0.9);
     font-family: "Radley", serif;
     position: fixed;
     top: 0;
     width: 100%;
-    height: auto;
     z-index: 1000;
     padding: 0 15px;
 }
-
-/* Contenedor del navbar */
 .navbar .container-fluid {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-/* Estilo para los elementos de navegación */
 .navbar-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-    width: 100%;
 }
-
-/* Espaciado entre los elementos de navegación */
 .nav-item {
     margin: 0 10px;
 }
-
-/* Estilo de los enlaces de navegación */
 .nav-link {
     color: #ffffff !important; 
     font-size: 18px;
     padding: 15px 10px; 
     text-decoration: none; 
 }
-
 .nav-link:hover {
     color: #ecee97c5 !important; 
 }
-
-/* Estilo para los botones de la derecha */
 .navbar-nav .btn {
-    background-color: #ffffff; /* Fondo blanco para los botones */
-    color: #9B4819; /* Color del texto del botón */
-    border: none; /* Sin borde para los botones */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; 
+    color: #9B4819; 
+    border: none; 
+    border-radius: 5px; 
     font-size: 16px;
-    padding: 5px 10px; /* Espaciado interno */
-    margin: 0 5px; /* Espaciado horizontal entre los botones */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de color */
+    padding: 5px 10px; 
+    margin: 0 5px; 
+    transition: background-color 0.3s, color 0.3s; 
 }
-
 .navbar-nav .btn:hover {
-    background-color: #9B4819; /* Fondo del botón al pasar el mouse */
-    color: #ffffff; /* Color del texto del botón al pasar el mouse */
+    background-color: #9B4819; 
+    color: #ffffff;
 }
-
-
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: none;
+    }
+    .navbar-nav.responsive {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-toggler-icon {
+    color: #ffffff;
+}
+.navbar .btn-container {
+    display: flex;
+}
 /*HOME*/
 
 .hero-text h1 {
@@ -302,7 +307,7 @@ nav.navbar {
     }
 
     .decorations .decoration, .sparkle, .wave {
-        display: none; /* Hide decorations on smaller screens */
+        display: none; 
     }
     .brush-container{
         opacity: 0;
@@ -400,7 +405,7 @@ nav.navbar {
 }
 
 .study-card img {
-    width: 150px;
+    width: 120px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 2%;
@@ -462,13 +467,13 @@ nav.navbar {
 
 .timeline-line {
     position: absolute;
-    left: 30px; /* Espacio para la fecha */
+    left: 30px;
     top: 0;
     bottom: 0;
     width: 2px;
     background-color: #9b4819;
     z-index: 1;
-    clip-path: inset(60px 0 110px 0); /* Recorta desde arriba */
+    clip-path: inset(60px 0 110px 0);
 }
 
 .course-item {
@@ -476,12 +481,12 @@ nav.navbar {
     align-items: center;
     margin-bottom: 40px;
     position: relative;
-    padding-left: 80px; /* Espacio para la fecha y línea temporal */
+    padding-left: 80px; 
 }
 
 .course-date {
     position: absolute;
-    left: 1px; /* Ajusta según el tamaño de la línea */
+    left: 1px; 
     width: 60px;
     height: 60px;
     line-height: 60px;
@@ -516,7 +521,7 @@ nav.navbar {
 
 @media (max-width: 768px) {
     .course-item {
-        padding-left: 60px; /* Reducir espacio para dispositivos pequeños */
+        padding-left: 60px; 
         margin-bottom: 0px;
     }
 
@@ -525,7 +530,7 @@ nav.navbar {
         height: 50px;
         line-height: 50px;
         font-size: 14px;
-        left: 5px; /* Ajusta según el nuevo tamaño de la línea */
+        left: 5px; 
     }
 
     .course-content {
@@ -741,15 +746,15 @@ nav.navbar {
 .bgimage {
     background-color: #9b4819;
     width: 100%;
-    height: 100vh; /* La sección ocupará toda la altura de la ventana */
-    background-image: url('/media/backgroundimg.png'); /* Cambia esto por la ruta de tu imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir toda el área */
-    background-position: center; /* Centra la imagen en la sección */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; 
+    background-image: url('/media/backgroundimg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white; /* Color del texto */
+    color: white; 
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
@@ -757,8 +762,8 @@ nav.navbar {
 
 @media (max-width: 768px) {
     .bgimage {
-        background-size: contain; /* Ajusta la imagen para que sea completamente visible */
-        height: 300px;
+        background-size: contain;
+        height: 200px;
     }
 }
 
