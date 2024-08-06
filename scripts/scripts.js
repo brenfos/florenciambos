@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             publicTranslations: "Traducciones Públicas",
             contact: "Contacto",
             /*Inicio*/
-            hola: "¡Hola, Soy",
-            flor: "Flor!",
+            hello: '¡Hola, Soy <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
             inicioprofesion: "Soy Traductora Pública y Audiovisual",
             iniciospeach: "Traduce tus visiones al mundo. Da vida a tus creaciones audiovisuales.",
             inicioenes: "TRADUCCIONES INGLÉS - ESPAÑOL",
@@ -45,7 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
             by6: "Disertantes: Xosé Castro Roig, Liliana Bernardita Mariotto, Damián Santilli, Mariana Costa, entre otros.",
             /*Subtitulados*/
             titlesub: "Subtitulados",
-            contentsub: "Transforma tu contenido con precisión y profesionalismo: ¡Bienvenido a mis servicios de traducción y subtitulación! Aquí, transformaré tu contenido audiovisual en una experiencia accesible para audiencias globales. Puedo llevar tu proyecto audiovisual al siguiente nivel. Con experiencia en múltiples producciones, garantizo resultados de alta calidad con un enfoque personalizado y eficiente.",
+            contentsub: "¡Transforma tu contenido con precisión y profesionalismo!", 
+            contentsub2: "¡Bienvenido a mis servicios de traducción y subtitulación! Aquí, transformaré tu contenido audiovisual en una experiencia accesible para audiencias globales:", 
+            contentsub3: "Puedo llevar tu proyecto audiovisual al siguiente nivel. Con experiencia en múltiples producciones, garantizo resultados de alta calidad con un enfoque personalizado y eficiente.",
             titlesub2: "Ofrezco los siguientes servicios de traducción audiovisual:",
             subtipelis: "Subtitulado de Películas",
             subtitv: "Subtitulado de Programas\n de TV y Animación",
@@ -77,14 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
             declajura: "Declaraciones juradas",
             diplo: "Diplomas",
             docuacad: "Documentos académicos",
+            financial: "Documentos financieros",
             podnota: "Poderes notariales",
             /*Contacto*/
             contact2: "¡Contactame desde cualquier lugar del mundo!",
             pcontact2: "Contáctate conmigo:",
-
-            
         },
-        
         en: { 
             /*Navbar*/
             about: "About Me",
@@ -95,8 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
             publicTranslations: "Sworn Translations",
             contact: "Contact",
             /*Home*/
-            hola: "Hello, I am",
-            flor: "Flor!",
+            hello: 'Hello, I am <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
             inicioprofesion: "I am an Audiovisual and Sworn Translator.",
             iniciospeach: "Let's bring your stories to life, seamlessly bridging languages and cultures.",
             inicioenes: "ENGLISH - SPANISH TRANSLATIONS",
@@ -104,9 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
             abouttext: "I am a Sworn and Audiovisual Translator, actively working since the year 2012.",
             abouttitle: "English - Spanish Translations",
             abouttext2: "Why did I choose translation?",
-            abouttext3: "I discovered my passion for the English language and linguistics very early on. Ever since I was a little kid, I have been consuming all types of English content, I thrived in listening to the language and understanding foreign cultures. The first thing that caught my attention was music – I was delighted by the idea of understanding what my favorite bands were singing. It felt like a super power. As a teenager, I was increasingly drawn to the world of movies. The magic of subtitles allowed me to immerse myself in universes that would have been kept separate otherwise. My fascination for music and movies, plus my love for the English language, made me discover a career that connects all my passions – Audiovisual Translation. Throughout the years, I have had the privilege of working in different projects that range from movies and TV shows to corporate videos and documentaries. My goal has always been to faithfully transmit the essence and style of the original content, and my knowledge of the different cultures makes it easy for me to localize the content for the target audience. My academic background and professional experience have been crucial in shaping my skill set. Each new project presents an opportunity to blend my passion for language, linguistics, and Anglo-Saxon culture with my commitment to bridging cultural gaps through the power of audiovisual translation.",
+            abouttext3: "I discovered my passion for the English language and linguistics very early on. Ever since I was a little kid, I have been consuming all types of English content, I thrived in listening to the language and understanding foreign cultures. The first thing that caught my attention was music – I was delighted by the idea of understanding what my favorite bands were singing. It felt like a super power. As a teenager, I was increasingly drawn to the world of movies.\n The magic of subtitles allowed me to immerse myself in universes that would have been kept separate otherwise. My fascination for music and movies, plus my love for the English language, made me discover a career that connects all my passions – <strong> Audiovisual Translation.</strong> \n Throughout the years, I have had the privilege of working in different projects that range from movies and TV shows to corporate videos and documentaries. My goal has always been to faithfully transmit the essence and style of the original content, and my knowledge of the different cultures makes it easy for me to localize the content for the target audience. \n My academic background and professional experience have been crucial in shaping my skill set. Each new project presents an opportunity to blend my passion for language, linguistics, and Anglo-Saxon culture with my commitment to bridging cultural gaps through the power of audiovisual translation.",
             abouttext4: "What are my specialties?",
-            abouttext5: "I specialize in Subtitling, Closed Captioning, SDH, and QC across a wide range of movies, TV shows, documentaries, and corporate videos. Also, I am a Sworn Translator, I am enrolled in the Buenos Aires Sworn Translators Association (CTPCBA), so I am equipped to assist you with all your certified translation requirements.",
+            abouttext5: "I specialize in <strong>Subtitling</strong>, <strong>Closed Captioning</strong>, <strong>SDH</strong>, and <strong>QC</strong> across a wide range of movies, TV shows, documentaries, and corporate videos. \n Also, I am a <strong>Sworn Translator</strong>, I am enrolled in Sworn Translators Association in Buenos Aires (CTPCBA), so I am equipped to assist you with all your certified translation requirements.",
             /*Education*/
             caeceTitle1: "CAECE University",
             swornTranslator: "Sworn Translator",
@@ -128,7 +126,9 @@ document.addEventListener('DOMContentLoaded', function () {
             curso6: "III International Seminar on Translation  and Interpretation",
             by6: "Special guest speakers: Xosé Castro Roig, Liliana Bernardita Mariotto, Damián Santilli, among others.",
             /*Subtitling*/
-            contentsub: "Transform your content with precision and professionalism: Welcome to my translation and subtitling services! Here, I will transform your audiovisual content into an accessible experience for global audiences. I can take your audiovisual project to the next level. With experience in multiple productions, I guarantee high quality results with a personalized and efficient approach.",
+            contentsub: "Transform your content with precision and professionalism!",
+            contentsub2: "Welcome to my translation and subtitling services! Here, I will transform your audiovisual content into an accessible experience for global audiences:",
+            contentsub3: "I can take your audiovisual project to the next level. With experience in multiple productions, I guarantee high quality results with a personalized and efficient approach.", 
             titlesub2: "I offer the following audiovisual services:",
             subtipelis: "Subtitling of Movies",
             subtitv: "Subtitling of TV \n and Animation shows" ,
@@ -162,11 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
             declajura: "Income Tax Returns",
             diplo: "Diploma",
             docuacad: "School Documents (Elementary and High School Certificates, University Diplomas and School Transcripts)",
+            financial: "Financial Documents",
             podnota: "Powers of attorney",
             /*Contacto*/
             contact2: "Contact me from anywhere in the world!",
             pcontact2: "Contact me or follow me at:",
-
         }
     };
 
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (elem.tagName === 'INPUT' || elem.tagName === 'TEXTAREA') {
                         elem.placeholder = text;
                     } else {
-                        elem.innerText = text;
+                        elem.innerHTML = text;
                     }
                     if (elem.hasAttribute('title')) {
                         elem.title = text;

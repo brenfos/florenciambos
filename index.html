@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="96x96" href="/media/favicon.png">
-
 </head>
 
 <body>
@@ -56,24 +55,16 @@
         </div>
     </nav>
     
-    
-    
-
     <!-- Sección Inicio -->
     <header class="hero-section">
         <div class="logo-container">
             <img src="/media/favicon.png" alt="Logo">
         </div>
-       
         <div class="hero-text">
             <br>
             <br>
             <br>
-            <h1 class="hello">Hello, I am <span class="highlight">Flor!
-                <svg class="brush-container" viewBox="0 0 250 150">
-                    <path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" />
-                </svg>
-            </span></h1>
+            <h1 class="hello" data-lang="hello"></h1>
             <p class="profession" data-lang="inicioprofesion"></p>
             <p class="description" data-lang="iniciospeach"></p>
             <div class="specialty">
@@ -110,166 +101,164 @@
         </div>
     </section>
 
+    <!-- Sección Estudios -->
+    <div class="background-container">
+        <section id="estudios" class="container my-5">
+            <h2 class="tittle-study" data-lang="studies"></h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="study-card text-center p-3 shadow-sm">
+                        <img src="./media/caecece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
+                        <h3 class="studietext" data-lang="caeceTitle1"></h3>
+                        <h3 class="studietext" data-lang="caeceTitle2"></h3>
+                        <hr>
+                        <div class="separator"></div>
+                        <p data-lang="swornTranslator" class="carreratitulo"></p>
+                        <p data-lang="caeceDates1" class="inglespañol"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="study-card text-center p-3 shadow-sm">
+                        <img src="./media/caece.jpg" alt="University logo" class="img-fluid rounded-circle mb-3">
+                        <h3 class="studietext" data-lang="caeceTitle1"></h3>
+                        <h3 class="studietext" data-lang="caeceTitle2"></h3>
+                        <div class="separator"></div>
+                        <hr>
+                        <p data-lang="techTranslator" class="carreratitulo"></p>
+                        <p data-lang="caeceDates1" class="inglespañol"></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="study-card text-center p-3 shadow-sm">
+                        <img src="./media/bsas.jpg" alt="Association logo" class="img-fluid rounded-circle mb-3">
+                        <h3 class="studietext" data-lang="bsasTitle" style="margin-bottom: 23px;"></h3>
+                        <div class="separator"></div>
+                        <hr>
+                        <p data-lang="swornTranslatorCourse" class="carreratitulo"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
-<!-- Sección Estudios -->
-<div class="background-container">
-    <section id="estudios" class="container my-5">
-        <h2 class="tittle-study" data-lang="studies"></h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="study-card text-center p-3 shadow-sm">
-                    <img src="./media/caecece.png" alt="University logo" class="img-fluid rounded-circle mb-3">
-                    <h3 class="studietext" data-lang="caeceTitle1"></h3>
-                    <h3 class="studietext" data-lang="caeceTitle2"></h3>
-                    <hr>
-                    <div class="separator"></div>
-                    <p data-lang="swornTranslator" class="carreratitulo"></p>
-                    <p data-lang="caeceDates1" class="inglespañol"></p>
+    <!-- Sección Cursos -->
+    <div class="background-container">
+        <section id="courses" class="container my-5">
+            <h2 class="title-courses" data-lang="courses"></h2>
+            <div class="courses-timeline">
+                <div class="timeline-line"></div>
+                <div class="course-item">
+                    <div class="course-date">2023</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso1"></h3>
+                        <p class="course-instructor" data-lang="by1"></p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-date">2020</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso2"></h3>
+                        <p class="course-instructor" data-lang="by2"></p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-date">2018</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso3"></h3>
+                        <p class="course-instructor" data-lang="by2"></p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-date">2014</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso4"></h3>
+                        <p class="course-instructor" data-lang="by4"></p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-date">2013</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso5"></h3>
+                        <p class="course-instructor" data-lang="by5"></p>
+                    </div>
+                </div>
+                <div class="course-item">
+                    <div class="course-date">2011</div>
+                    <div class="course-content">
+                        <h3 class="course-title" data-lang="curso6"></h3>
+                        <p class="course-instructor" data-lang="by6"></p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="study-card text-center p-3 shadow-sm">
-                    <img src="./media/caece.jpg" alt="University logo" class="img-fluid rounded-circle mb-3">
-                    <h3 class="studietext" data-lang="caeceTitle1"></h3>
-                    <h3 class="studietext" data-lang="caeceTitle2"></h3>
-                    <div class="separator"></div>
-                    <hr>
-                    <p data-lang="techTranslator" class="carreratitulo"></p>
-                    <p data-lang="caeceDates1" class="inglespañol"></p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="study-card text-center p-3 shadow-sm">
-                    <img src="./media/bsas.jpg" alt="Association logo" class="img-fluid rounded-circle mb-3">
-                    <h3 class="studietext" data-lang="bsasTitle" style="margin-bottom: 23px;"></h3>
-                    <div class="separator"></div>
-                    <hr>
-                    <p data-lang="swornTranslatorCourse" class="carreratitulo"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-<!-- Sección Cursos -->
-<div class="background-container">
-    <section id="courses" class="container my-5">
-        <h2 class="title-courses" data-lang="courses"></h2>
-        <div class="courses-timeline">
-            <div class="timeline-line"></div>
-            <div class="course-item">
-                <div class="course-date">2023</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso1"></h3>
-                    <p class="course-instructor" data-lang="by1"></p>
-                </div>
-            </div>
-            <div class="course-item">
-                <div class="course-date">2020</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso2"></h3>
-                    <p class="course-instructor" data-lang="by2"></p>
-                </div>
-            </div>
-            <div class="course-item">
-                <div class="course-date">2018</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso3"></h3>
-                    <p class="course-instructor" data-lang="by2"></p>
-                </div>
-            </div>
-            <div class="course-item">
-                <div class="course-date">2014</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso4"></h3>
-                    <p class="course-instructor" data-lang="by4"></p>
-                </div>
-            </div>
-            <div class="course-item">
-                <div class="course-date">2013</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso5"></h3>
-                    <p class="course-instructor" data-lang="by5"></p>
-                </div>
-            </div>
-            <div class="course-item">
-                <div class="course-date">2011</div>
-                <div class="course-content">
-                    <h3 class="course-title" data-lang="curso6"></h3>
-                    <p class="course-instructor" data-lang="by6"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
+        </section>
+    </div>
 
     <!-- Sección Subtitulados -->
     <section class="container-fluid">
-    <section id="subtitulados" class="container my-5">
-        <br>
-        <h1 class="titulinsubti" data-lang="titlesub"></h1>
-        <p class="psubti" data-lang="contentsub"></p>
-        <br>
-        <h2 class="titlesub2" data-lang="titlesub2"></h2>
-        <div class="row">
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/peli.jpeg" alt="iconmovie">
-                    <p class="difsubti"data-lang="subtipelis">Películas</p>
+        <section id="subtitulados" class="container my-5">
+            <br>
+            <h1 class="titulinsubti" data-lang="titlesub"></h1>
+            <p class="psubti" data-lang="contentsub"></p>
+            <p class="psubti3" data-lang="contentsub2"></p>
+            <p class="psubti2" data-lang="contentsub3"></p>
+            <br>
+            <h2 class="titlesub2" data-lang="titlesub2"></h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/peli.jpeg" alt="iconmovie">
+                        <p class="difsubti" data-lang="subtipelis">Películas</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/tv.jpeg" alt="icontv">
+                        <p class="difsubti" data-lang="subtitv">Programas de TV</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/documental.jpeg" alt="Subtitulado de documentales">
+                        <p class="difsubti" data-lang="subtidocu">Documentales</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/corpovid.jpeg" alt="iconcourse">
+                        <p class="difsubti"data-lang="videocorp">Videos Corporativos</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/interview.jpeg" alt="iconinterview">
+                        <p class="difsubti" data-lang="subtientre">Entrevistas</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/videopromo.jpeg" alt="iconpodcast">
+                        <p class="difsubti"data-lang="subtivideopromo">Videos Promocionales</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/ytb.jpeg" alt="iconvideoclip">
+                        <p class="difsubti"data-lang="subtiytb">YouTube</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="service p-3 text-center shadow-sm">
+                        <img class="iconsubti img-fluid mb-3" src="./media/tuto.jpeg" alt="iconvideoclip">
+                        <p class="difsubti"data-lang="subtionline">Tutoriales en Línea</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/tv.jpeg" alt="icontv">
-                    <p class="difsubti" data-lang="subtitv">Programas de TV</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/documental.jpeg" alt="Subtitulado de documentales">
-                    <p class="difsubti" data-lang="subtidocu">Documentales</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/corpovid.jpeg" alt="iconcourse">
-                    <p class="difsubti"data-lang="videocorp">Videos Corporativos</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/interview.jpeg" alt="iconinterview">
-                    <p class="difsubti" data-lang="subtientre">Entrevistas</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/videopromo.jpeg" alt="iconpodcast">
-                    <p class="difsubti"data-lang="subtivideopromo">Videos Promocionales</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/ytb.jpeg" alt="iconvideoclip">
-                    <p class="difsubti"data-lang="subtiytb">YouTube</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="service p-3 text-center shadow-sm">
-                    <img class="iconsubti img-fluid mb-3" src="./media/tuto.jpeg" alt="iconvideoclip">
-                    <p class="difsubti"data-lang="subtionline">Tutoriales en Línea</p>
-                </div>
-            </div>
-        </div>
+        </section>
+        <div class="imgsubti"> <img class="imgsubti2" src="./media/subtitle.jpg" alt=""></div>
     </section>
-    <div class="imgsubti"> <img class="imgsubti2"src="./media/subtitle.jpg" alt=""></div>
-</section>
 
-
-<!-- Cuánto cuesta un -->
- <br>
+    <!-- Cuánto cuesta un -->
+    <br>
     <section class="container-fluid">
         <section id="subtitulados" class="container my-5">
             <h1 class="titulinsubti" data-lang="titlevalor"></h1>
@@ -296,63 +285,57 @@
         </section>
     </section>
 
+    <!-- Traducciones Públicas -->
+    <div id="traducciones-publicas-wrapper">
+        <section id="traducciones-publicas" class="container my-5">
+            <h2 class="tradupubli" data-lang="tradutitle">Traducciones Públicas</h2>
+            <p class="ptradu" data-lang="ptradu1"></p>
+            <div class="row content-wrapper">
+                <div class="col-md-6 text-content">
+                    <h5 class="titletradu2" data-lang="tradutitle2"></h5>
+                    <ul class="list-group">
+                        <li class="list-group-item" data-lang="certi"></li>
+                        <li class="list-group-item" data-lang="balance"></li>
+                        <li class="list-group-item" data-lang="contrato"></li>
+                        <li class="list-group-item" data-lang="estatutos"></li>
+                        <li class="list-group-item" data-lang="declajura"></li>
+                        <li class="list-group-item" data-lang="diplo"></li>
+                        <li class="list-group-item" data-lang="docuacad"></li>
+                        <li class="list-group-item" data-lang="financial"></li>
+                        <li class="list-group-item" data-lang="podnota"></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 imgtras">
+                    <img class="imgtras2" src="./media/traslate.jfif" alt="Imagen de traducción">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Contacto -->
+    <div id="contacto-wrapper">
+        <section id="contacto" class="container my-5 text-center">
+            <h1 class="contact-title" data-lang="contact2"></h1>
+            <p class="contact-text" data-lang="pcontact2"></p>
+            <div class="social-icons">
+                <a href="mailto:florenciaambos@hotmail.com">
+                    <img src="./media/email.png" alt="Email" class="social-icon">
+                </a>
+                <a href="https://www.linkedin.com/in/florenciaambos/" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://www.translatorscafe.com/cafe/member195221.htm" target="_blank" rel="noopener noreferrer">
+                    <img src="./media/tc.png" alt="Another Page" class="social-icon">
+                </a>
+            </div>
+            <br>
+            <br>
+            <p class="pcontacto"> www.florenciaambos.com | florenciaambos@hotmail.com | Copyright © Florencia Ambos 2024</p>
+        </section>
+    </div>
 
-  <!-- Traducciones Públicas -->
-<div id="traducciones-publicas-wrapper">
-    <section id="traducciones-publicas" class="container my-5">
-      <h2 class="tradupubli" data-lang="tradutitle">Traducciones Públicas</h2>
-      <p class="ptradu" data-lang="ptradu1"></p>
-      
-      <div class="row content-wrapper">
-        <div class="col-md-6 text-content">
-          <h5 class="titletradu2" data-lang="tradutitle2"></h5>
-          <ul class="list-group">
-            <li class="list-group-item" data-lang="certi"></li>
-            <li class="list-group-item" data-lang="balance"></li>
-            <li class="list-group-item" data-lang="contrato"></li>
-            <li class="list-group-item" data-lang="estatutos"></li>
-            <li class="list-group-item" data-lang="declajura"></li>
-            <li class="list-group-item" data-lang="diplo"></li>
-            <li class="list-group-item" data-lang="docuacad"></li>
-            <li class="list-group-item" data-lang="podnota"></li>
-          </ul>
-        </div>
-        <div class="col-md-6 imgtras">
-          <img class="imgtras2" src="./media/traslate.jfif" alt="Imagen de traducción">
-        </div>
-      </div>
-    </section>
-  </div>
-  
- 
-
-<!-- Contacto -->
-<div id="contacto-wrapper">
-    <section id="contacto" class="container my-5 text-center">
-        <h1 class="contact-title" data-lang="contact2"></h1>
-        <p class="contact-text" data-lang="pcontact2"></p>
-        <div class="social-icons">
-            <a href="mailto:florenciaambos@hotmail.com">
-                <img src="./media/email.png" alt="Email" class="social-icon">
-            </a>
-            <a href="https://www.linkedin.com/in/florenciaambos/" target="_blank" rel="noopener noreferrer">
-                <img src="./media/linkedin.png" alt="LinkedIn" class="social-icon">
-            </a>
-            <a href="https://www.translatorscafe.com/cafe/member195221.htm" target="_blank" rel="noopener noreferrer">
-                <img src="./media/tc.png" alt="Another Page" class="social-icon">
-            </a>
-       </div>
-       <br>
-       <br>
-       <p class="pcontacto"> www.florenciaambos.com | florenciaambos@hotmail.com | Copyright © Florencia Ambos 2024</p>
-    </section>
-</div>
-
-
- <!-- Sección de Imágenes -->
- <section class="bgimage">
-   
- </section>
+    <!-- Sección de Imágenes -->
+    <section class="bgimage"></section>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

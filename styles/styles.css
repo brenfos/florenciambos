@@ -15,10 +15,10 @@ body {
 nav.navbar {
     background-color: #9B4819;
     font-family: "Radley", serif;
-    position: fixed; /* Fijar navbar en la parte superior */
+    position: fixed;
     top: 0;
     width: 100%;
-    height: auto; /* Ajuste de altura automático */
+    height: auto;
     z-index: 1000;
     padding: 0 15px;
 }
@@ -35,40 +35,25 @@ nav.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* Centra los elementos horizontalmente */
+    justify-content: center;
     width: 100%;
 }
 
 /* Espaciado entre los elementos de navegación */
 .nav-item {
-    margin: 0 10px; /* Ajusta el espaciado según sea necesario */
+    margin: 0 10px;
 }
 
 /* Estilo de los enlaces de navegación */
 .nav-link {
-    color: #ffffff !important; /* Color de texto blanco */
+    color: #ffffff !important; 
     font-size: 18px;
-    padding: 15px 10px; /* Espaciado interno para los enlaces */
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    padding: 15px 10px; 
+    text-decoration: none; 
 }
 
 .nav-link:hover {
-    color: #b3aaaac5 !important; /* Color de texto al pasar el mouse */
-}
-
-/* Estilo para el menú desplegable */
-.dropdown-menu {
-    background-color: #b49786; /* Fondo del menú desplegable */
-    border: none; /* Elimina el borde del menú desplegable */
-}
-
-.dropdown-item {
-    color: #ffffff; /* Color de texto blanco para los elementos del dropdown */
-}
-
-.dropdown-item:hover {
-    background-color: #7e3f12; /* Color de fondo al pasar el mouse */
-    color: #ffffff;
+    color: #ecee97c5 !important; 
 }
 
 /* Estilo para los botones de la derecha */
@@ -88,151 +73,96 @@ nav.navbar {
     color: #ffffff; /* Color del texto del botón al pasar el mouse */
 }
 
-/* Cambia el color del icono de hamburguesa a blanco y ajusta su tamaño */
-.navbar-toggler {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-}
+@media (max-width: 1158px) {
+    /* Ajustes para dispositivos medianos a pequeños */
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .navbar-collapse {
+        width: 100%;
+    }
 
-.navbar-toggler-icon {
-    width: 30px;
-    height: 22px;
-    display: inline-block;
-    position: relative;
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon span {
-    content: '';
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    display: block;
-    position: absolute;
-    left: 0;
-    transition: all 0.3s;
-}
-
-.navbar-toggler-icon::before {
-    top: 0;
-}
-
-.navbar-toggler-icon span {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.navbar-toggler-icon::after {
-    bottom: 0;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 991.98px) {
     .navbar-nav {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
     }
-    
-    .navbar-nav .nav-item {
+
+    .nav-item {
+        width: 100%;
         margin: 5px 0;
-    }
-}
-
-
-@media (max-width: 575.98px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .navbar-nav .nav-item {
-        margin: 5px 0;
-    }
-    
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        padding: 10px 5px;
-    }
-
-    .navbar-nav .btn {
-        margin: 5px;
-        display: inline-block;
     }
     
     .navbar-nav .btn-container {
         display: flex;
         justify-content: center;
-        margin-top: 10px;
+        width: 100%;
     }
 
     .navbar-nav .btn {
-        margin: 0 5px;
+        margin: 5px;
+        flex: 1;
+      background-color: #ffffff; /* Fondo blanco para los botones */
+        color: #9B4819; /* Color del texto del botón */
+    }
+    
+    .navbar-nav .btn:hover {
+        background-color: #a85424; /* Fondo del botón al pasar el mouse */
+        color: #ffffff; /* Color del texto del botón al pasar el mouse */
+    }
+
+    .navbar-toggler {
+        display: block;
+        background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco más transparente para el botón del menú hamburguesa */
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        background-image: none;
+        position: relative;
+        width: 30px;
+        height: 22px;
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon span {
+        content: '';
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff; /* Color blanco para las líneas del icono */
+        display: block;
+        position: absolute;
+        left: 0;
+        transition: all 0.3s;
+    }
+
+    .navbar-toggler-icon::before {
+        top: 0;
+    }
+
+    .navbar-toggler-icon span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .navbar-toggler-icon::after {
+        bottom: 0;
+    }
+
+    .navbar-collapse {
+        display: none;
+    }
+
+    .navbar-collapse.show {
+        display: flex !important;
+        flex-direction: column;
+        width: 100%;
     }
 }
-
 
 /*HOME*/
-
-.brush-container {
-    width: 450px; /* Mantiene el ancho para abarcar mejor la palabra */
-    height: 250px; /* Aumenta la altura para abarcar mejor la palabra */
-    position: absolute;
-    top: 37%;
-    left: 67%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes drawPath {
-    0% {
-        stroke-dasharray: 0, 950;
-        animation-timing-function: ease-in;
-    }
-    100% {
-        stroke-dasharray: 950, 0;
-        animation-timing-function: ease-out;
-    }
-}
-
-#brushPath {
-    stroke-dasharray: 950, 950;
-    animation: drawPath 2s linear infinite;
-    stroke: black;
-    stroke-linecap: round;
-    stroke-width: 2;
-    filter: url(#strokeEffect);
-}
-
-.hero-section {
-    margin-top: 100px;
-    text-align: center;
-    padding: 130px;
-    position: relative;
-    overflow: hidden;
-   
-}
-
-
-@keyframes circleBounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-@keyframes rotateCircle {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@keyframes circleShadow {
-    0%, 100% { box-shadow: 0 0 0 rgba(0, 0, 0, 0); }
-    50% { box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
-}
-
-@keyframes borderGlow {
-    0%, 100% { border-color: #000; }
-    50% { border-color:  #314028; }
-}
 
 .hero-text h1 {
     font-family: 'Radley', serif;
@@ -381,48 +311,6 @@ nav.navbar {
 }
 
 
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 30px 10px; /* Reduce el padding en pantallas más pequeñas */
-    }
-
-    .hero-text h1 {
-        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
-    }
-
-    .profession {
-        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
-    }
-
-    .description {
-        font-size: 0.9rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
-    }
-
-    .specialty {
-        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
-    }
-
-    .underline {
-        width: 70%; /* Ajusta el ancho para pantallas más pequeñas */
-    }
-
-    .logo-container {
-        top: 2px; /* Ajusta la posición del logo en pantallas más pequeñas */
-        width: 60px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
-    }
-
-    .brush-container {
-        width: 30%; /* Ajusta el ancho del SVG para pantallas más pequeñas */
-        height: auto;
-        top: 33%;
-        left: 72%;
-    }
-
-    #brushPath {
-        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
-    }
-}
-
 
 
 /* Animaciones */
@@ -491,6 +379,7 @@ nav.navbar {
         font-size: 2rem;
     }
 
+
     .profession, .description, .specialty {
         font-size: 0.9rem;
     }
@@ -503,6 +392,7 @@ nav.navbar {
     .decorations .decoration, .sparkle, .wave {
         display: none; /* Hide decorations on smaller screens */
     }
+
 }
 
 /*ABOUT ME*/
@@ -742,10 +632,19 @@ nav.navbar {
 }
 
 .psubti{
-    font-family: "Carlito", sans-serif;
-    font-size: 20px;
-    text-align: justify;
+    color: #9b4819;
     margin-bottom: 3%;
+    text-align: center;
+    font-family: "Radley", serif;
+    font-size: 35px;
+}
+.psubti3{
+    color: #000000;
+    margin-bottom: 3%;
+    text-align: center;
+    font-family: "Radley", serif;
+    font-size: 27px;
+    
 }
 
 .titlesub2{
@@ -1036,3 +935,92 @@ nav.navbar {
 }
 
 
+.hello {
+    position: relative;
+    font-size: 2rem; /* Ajusta según sea necesario */
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+}
+
+.brush-container {
+    width: 145%; /* Ajusta el ancho del SVG al 100% del contenedor */
+    height: auto; /* Mantiene la proporción del SVG */
+    position: absolute;
+    top: 0;
+    left: -68px;
+    transform: translateY(-20%); /* Ajusta según sea necesario */
+}
+
+@keyframes drawPath {
+    0% {
+        stroke-dasharray: 0, 950;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        stroke-dasharray: 950, 0;
+        animation-timing-function: ease-out;
+    }
+}
+
+#brushPath {
+    stroke-dasharray: 950, 950;
+    animation: drawPath 2s linear infinite;
+    stroke: black;
+    stroke-linecap: round;
+    stroke-width: 2.25;
+    filter: url(#strokeEffect);
+}
+
+.hero-section {
+    margin-top: 100px;
+    text-align: center;
+    padding: 130px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .profession {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .description {
+        font-size: 0.9rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .specialty {
+        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+    }
+
+    .underline {
+        width: 70%; /* Ajusta el ancho para pantallas más pequeñas */
+    }
+
+    .logo-container {
+        top: 2px; /* Ajusta la posición del logo en pantallas más pequeñas */
+        width: 60px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+    }
+
+    .brush-container {
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        transform: translateY(-20%);
+    }
+
+    #brushPath {
+        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
+    }
+}
