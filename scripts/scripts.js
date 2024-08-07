@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             swornTranslator: "Traductora Pública",
             techTranslator: "Traductora Técnico-Científica",
             caeceDates1: "Inglés - Español, 2008 - 2012",
+            caeceDates2: "Inglés - Español, 2008 - 2013",
             bsasTitle: "As. de Traductores Públicos\n en Buenos Aires",
             swornTranslatorCourse: "Miembro del Colegio de Traductores Públicos de la Ciudad de Buenos Aires (CTPCBA)",
             /*Cursos*/
@@ -100,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
             iniciospeach: "Let's bring your stories to life, seamlessly bridging languages and cultures.",
             inicioenes: "ENGLISH - SPANISH TRANSLATIONS",
             /*About me*/
-            abouttext: "I am a Sworn and Audiovisual Translator, actively working since the year 2012.",
+            abouttext: "I am a Sworn and Audiovisual Translator, actively working since the year 2013.",
             abouttitle: "English - Spanish Translations",
             abouttext2: "Why did I choose translation?",
             abouttext3: "I discovered my passion for the English language and linguistics very early on. Ever since I was a little kid, I have been consuming all types of English content, I thrived in listening to the language and understanding foreign cultures. The first thing that caught my attention was music – I was delighted by the idea of understanding what my favorite bands were singing. It felt like a super power. As a teenager, I was increasingly drawn to the world of movies.<br>The magic of subtitles allowed me to immerse myself in universes that would have been kept separate otherwise. My fascination for music and movies, plus my love for the English language, made me discover a career that connects all my passions – <strong> Audiovisual Translation.</strong> <br>Throughout the years, I have had the privilege of working in different projects that range from movies and TV shows to corporate videos and documentaries. My goal has always been to faithfully transmit the essence and style of the original content, and my knowledge of the different cultures makes it easy for me to localize the content for the target audience. <br>My academic background and professional experience have been crucial in shaping my skill set. Each new project presents an opportunity to blend my passion for language, linguistics, and Anglo-Saxon culture with my commitment to bridging cultural gaps through the power of audiovisual translation.",
@@ -111,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
             swornTranslator: "Sworn Translator",
             techTranslator: "Technical-Scientific Translator",
             caeceDates1: "English - Spanish, 2008 - 2012",
+            caeceDates2: "English - Spanish, 2008 - 2013",
             bsasTitle: "Sworn Translators Association in Buenos Aires",
             swornTranslatorCourse: "Member of the Sworn Translators Association in Buenos Aires (CTPCBA)",
             /*Courses*/
