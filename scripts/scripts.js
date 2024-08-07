@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             swornTranslatorCourse: "Member of the Sworn Translators Association in Buenos Aires (CTPCBA)",
             /*Courses*/
             courses: "Courses",
-            curso2: "Introduction to OOONA",
+            curso1: "Introduction to OOONA",
             by1: "Course given by Damián Santilli, Audiovisual and Sworn Translator.",
             curso2: "Specialization in Subtitling, level II",
             by2: "Course given by Damián Santilli and Mariana Costa, Audiovisual and Sworn Translators.",            
