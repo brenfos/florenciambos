@@ -10,75 +10,89 @@ body {
     margin: 0;
     padding: 0;
 }
+/*NAVBAR*/
+.navbar {
+    background-color: #9B4819;
+}
 
-/* NAVBAR */
-nav.navbar {
-    background-color: rgba(155, 72, 25, 0.9);
-    font-family: "Radley", serif;
+.navbar.fixed-top {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-    padding: 0 15px;
+    z-index: 1030;
 }
-.navbar .container-fluid {
+
+.navbar-toggler {
+    border: none;
+}
+
+.btn-container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px;
+    background-color: #9B4819;
 }
+
+.btn-container .btn {
+    background-color: transparent;
+    color: #F4F1E8;
+    border: 1px solid #F4F1E8;
+    font-family: 'Radley', serif;
+}
+
 .navbar-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    margin-right: auto;
 }
-.nav-item {
-    margin: 0 10px;
-}
-.nav-link {
-    color: #ffffff !important; 
+
+.navbar-nav .nav-link {
+    margin: 0 15px;
+    color: #F4F1E8;
+    font-family: 'Radley', serif;
     font-size: 18px;
-    padding: 15px 10px; 
-    text-decoration: none; 
 }
-.nav-link:hover {
-    color: #ecee97c5 !important; 
+
+.navbar-nav .nav-link:hover {
+    color: #6C3D0D;
 }
-.navbar-nav .btn {
-    background-color: #ffffff; 
-    color: #9B4819; 
-    border: none; 
-    border-radius: 5px; 
-    font-size: 16px;
-    padding: 5px 10px; 
-    margin: 0 5px; 
-    transition: background-color 0.3s, color 0.3s; 
+
+.dropdown-menu {
+    font-family: 'Radley', serif;
+    border: none;
+    box-shadow: none;
 }
-.navbar-nav .btn:hover {
-    background-color: #9B4819; 
-    color: #ffffff;
+
+.dropdown-item {
+    color: #9B4819;
 }
-@media (max-width: 767px) {
+
+.dropdown-item:hover {
+    background-color: #F4F1E8;
+    color: #6C3D0D;
+}
+
+@media (max-width: 991.98px) {
     .navbar-nav {
         display: none;
     }
-    .navbar-nav.responsive {
+
+    .btn-container {
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1030;
     }
-    .navbar-nav .nav-item {
-        margin: 0;
+}
+
+@media (min-width: 992px) {
+    .btn-container {
+        display: none;
     }
 }
-.navbar-toggler {
-    border-color: rgba(255, 255, 255, 0.1);
-}
-.navbar-toggler-icon {
-    color: #ffffff;
-}
-.navbar .btn-container {
-    display: flex;
-}
+
+
 /*HOME*/
 
 .hero-text h1 {
