@@ -11,13 +11,13 @@ body {
 }
 
 /*NAVBAR*/
-
 .navbar {
     background-color: #9B4819;
     font-family: 'Radley', serif;
-    font-size: 20px;   
+    font-size: 20px;
     height: 50px;
 }
+
 .navbar-nav .nav-link {
     margin: 0 15px;
     color: #F4F1E8;
@@ -47,43 +47,69 @@ body {
     font-family: 'Radley', serif;
 }
 
-@media (max-width: 991.98px) {
-    .navbar-nav {
-        display: none;
-    }
-
-    .navbar-toggler {
-        display: none;
-    }
-
-    .btn-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        background-color: #9B4819;
-        z-index: 1030;
-        padding: 10px 0;
-    }
-
-    .btn-container .btn {
-        margin: 0 3px;
-        font-size: 16px;
-    }
+.navbar-toggler {
+    border: none;
 }
 
-@media (min-width: 992px) {
+.navbar-toggler-icon {
+    background-color: transparent; /* Ensures the background is transparent */
+}
+
+
+/* Navbar en responsive */
+/* Navbar en responsive */
+@media (max-width: 985px) {
+    .navbar-collapse {
+        background-color: rgba(155, 72, 25, 0.8); /* Fondo transparente en el menú desplegable */
+    }
+
+    .navbar-nav .nav-link {
+        color: #F4F1E8; /* Color del texto en el menú desplegable */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #FFFFFF; /* Color del texto cuando el enlace es hover en el menú desplegable */
+    }
+
+    /* Asegura que el contenedor de los botones se mantenga fijo en la parte superior */
     .btn-container {
-        display: flex;
-        justify-content: flex-end;
-        position: static;
+        display: flex; /* Asegura que los botones sean visibles en vista móvil */
+        position: fixed; /* Fija los botones en la parte superior */
+        right: 15px; /* Espacio desde el borde derecho */
+        top: 0; /* Sin espacio desde el borde superior para que estén en la parte superior */
+        z-index: 1040; /* Asegura que los botones estén sobre el menú */
+    }
+
+    /* Asegura que el menú hamburguesa se muestre correctamente */
+    .navbar-toggler {
+        position: relative;
+        left: 15px; /* Espacio desde el borde derecho del navbar */
+        border: none;
         background-color: transparent;
     }
-}
 
+    .navbar-toggler-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Espacio igual entre las rayas */
+        width: 30px; /* Ancho del ícono del menú hamburguesa */
+        height: 20px; /* Altura total para acomodar las tres rayas */
+    }
+
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after,
+    .navbar-toggler-icon div {
+        content: "";
+        display: block;
+        height: 2px; /* Grosor de las rayas del ícono */
+        background-color: #F4F1E8; /* Color de las rayas */
+        width: 100%; /* Ancho de las rayas */
+    }
+
+    .navbar-toggler-icon div {
+        margin: 0; /* Elimina márgenes entre las rayas */
+    }
+}
 
 /*HOME*/
 .hero-text h1 {
