@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="titlepag">Florencia Ambos</title>
     <link rel="stylesheet" href="styles/styles.css">
-    
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">        
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Radley:ital@0;1&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./media/favicon.png">
+    <title data-lang="titlepag">Florencia Ambos</title>
 </head>
 
 <body>
@@ -19,7 +17,9 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="navbar-toggler-icon"></div>
+                <div class="navbar-toggler-icon">
+                    <div class="middle-bar"></div>
+                </div>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
@@ -51,12 +51,33 @@
         </div>
     </nav>
 
-<!-- Incluye jQuery y Bootstrap JS -->
+<!-- jQuery y Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 <script src="scripts/scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        function handleResize() {
+            const servicesDropdown = document.querySelector('#servicesDropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            if (window.innerWidth <= 985) {
+                // Ocultar el submenú en pantallas pequeñas
+                dropdownMenu.style.display = 'none';
+            } else {
+                // Mostrar el submenú en pantallas grandes
+                dropdownMenu.style.display = '';
+            }
+        }
+    
+        // Llama a la función para ocultar el submenú inicialmente
+        handleResize();
+    
+        // Añade un evento para manejar el cambio de tamaño de la ventana
+        window.addEventListener('resize', handleResize);
+    });
+    </script>
 
  <!-- Sección Inicio -->
      <section id="inicio">
@@ -64,10 +85,10 @@
         <div class="logo-container">
             <img src="./media/favicon.png" alt="Logo">
         </div>
+        <br>
+        <br>
+        <br>
         <div class="hero-text">
-            <br>
-            <br>
-            <br>
             <h1 class="hello" data-lang="hello"></h1>
             <p class="profession" data-lang="inicioprofesion"></p>
             <p class="description" data-lang="iniciospeach"></p>
@@ -352,6 +373,7 @@
             <br>
             <br>
             <p class="pcontacto"> www.florenciaambos.com | florenciaambos@hotmail.com | Copyright © Florencia Ambos 2024</p>
+            <p class="pcontacto">Audiovisual and Sworn Translator | Traductora Pública y Audiovisual</p>
         </section>
             </div>
         </section>

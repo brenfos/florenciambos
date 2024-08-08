@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             techTranslator: "Traductora Técnico-Científica",
             caeceDates1: "Inglés - Español, 2008 - 2012",
             caeceDates2: "Inglés - Español, 2008 - 2013",
-            bsasTitle: "As. de Traductores Públicos\n en Buenos Aires",
+            bsasTitle: "Colegio de Traductores Públicos\n en Buenos Aires",
             swornTranslatorCourse: "Miembro del Colegio de Traductores Públicos de la Ciudad de Buenos Aires (CTPCBA)",
             /*Cursos*/
             courses: "Cursos",
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
             /*Subtitulados*/
             titlesub: "Subtitulado",
             contentsub: "¡Transforma tu contenido con precisión y profesionalismo!", 
-            contentsub2: "¡Bienvenido a mis servicios de traducción y subtitulado! Aquí, transformaré tu contenido audiovisual en una experiencia accesible para audiencias globales:", 
+            contentsub2: "¡Bienvenido a mis servicios de traducción y subtitulado! Aquí, transformaré tu contenido audiovisual en una experiencia accesible para audiencias globales.", 
             contentsub3: "Puedo llevar tu proyecto audiovisual al siguiente nivel. Con experiencia en múltiples producciones, <br>garantizo resultados de alta calidad con un enfoque personalizado y eficiente.",
             titlesub2: "Ofrezco los siguientes servicios <br>de traducción audiovisual:" ,
             subtipelis: "Subtitulado de Películas",
@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             docuacad: "Documentos académicos",
             financial: "Documentos financieros",
             podnota: "Poderes notariales",
-
-               /*Contacto*/
+            /*Contacto*/
             contact2: "¡Contactame desde cualquier lugar del mundo!",
             pcontact2: "Escribime o seguime:",
         },
@@ -229,3 +228,67 @@ const links = document.querySelectorAll('a[href^="#"]');
             }
         });
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('a[href^="#"]');
+    
+        for (const link of links) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+    
+                try {
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                } catch (error) {
+                    // Para evitar que aparezca error en consola al clickear link de servicios
+                }
+            });
+        }
+
+        
+    
+        const servicesLink = document.querySelector('#servicesDropdown');
+    
+        servicesLink.addEventListener('click', function (event) {
+            if (window.innerWidth <= 986) {
+                event.preventDefault();
+    
+                try {
+                    const subtituladosSection = document.querySelector('#subtitulados');
+                    if (subtituladosSection) {
+                        subtituladosSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                } catch (error) {
+                    // Para evitar que aparezca error en consola al clickear link de servicios
+                }
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        function handleResize() {
+            const dropdownMenu = document.querySelector('#servicesMenu .dropdown-menu');
+            const servicesLink = document.querySelector('#servicesDropdown');
+            
+            if (window.innerWidth <= 985) {
+                // Oculta el submenú en pantallas pequeñas
+                dropdownMenu.style.display = 'none';
+            } else {
+                // Asegura que el submenú esté visible en pantallas grandes
+                dropdownMenu.style.display = '';
+            }
+        }
+    
+        // Llama a la función para aplicar el estado del submenú inicialmente
+        handleResize();
+    
+        // Añade un evento para manejar el cambio de tamaño de la ventana
+        window.addEventListener('resize', handleResize);
+    });
