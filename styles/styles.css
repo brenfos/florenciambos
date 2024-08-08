@@ -46,68 +46,76 @@ body {
     border: 1px solid #F4F1E8;
     font-family: 'Radley', serif;
 }
-
 .navbar-toggler {
     border: none;
+    padding: 0.25rem 0.75rem;
+    background-color: transparent;
 }
 
 .navbar-toggler-icon {
-    background-color: transparent; /* Ensures the background is transparent */
+    display: inline-block;
+    width: 30px;
+    height: 24px; 
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon .middle-bar {
+    content: "";
+    display: block;
+    background-color: #FFFFFF; 
+    height: 2px; 
+    width: 100%; 
+    position: absolute;
+    transition: all 0.3s ease; /* Transición para efectos suaves */
+}
+
+.navbar-toggler-icon::before {
+    top: 0; 
+}
+
+.navbar-toggler-icon .middle-bar {
+    top: 5px; 
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0; 
 }
 
 
-/* Navbar en responsive */
-/* Navbar en responsive */
 @media (max-width: 985px) {
     .navbar-collapse {
-        background-color: rgba(155, 72, 25, 0.8); /* Fondo transparente en el menú desplegable */
+        background-color: rgba(155, 72, 25, 0.8);
     }
 
     .navbar-nav .nav-link {
-        color: #F4F1E8; /* Color del texto en el menú desplegable */
+        color: #F4F1E8;
     }
 
     .navbar-nav .nav-link:hover {
-        color: #FFFFFF; /* Color del texto cuando el enlace es hover en el menú desplegable */
+        color: #FFFFFF;
     }
 
-    /* Asegura que el contenedor de los botones se mantenga fijo en la parte superior */
     .btn-container {
-        display: flex; /* Asegura que los botones sean visibles en vista móvil */
-        position: fixed; /* Fija los botones en la parte superior */
-        right: 15px; /* Espacio desde el borde derecho */
-        top: 0; /* Sin espacio desde el borde superior para que estén en la parte superior */
-        z-index: 1040; /* Asegura que los botones estén sobre el menú */
+        display: flex;
+        position: fixed;
+        right: 15px;
+        top: 0;
+        z-index: 1040;
     }
 
-    /* Asegura que el menú hamburguesa se muestre correctamente */
     .navbar-toggler {
         position: relative;
-        left: 15px; /* Espacio desde el borde derecho del navbar */
+        left: 15px;
         border: none;
         background-color: transparent;
     }
 
     .navbar-toggler-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Espacio igual entre las rayas */
-        width: 30px; /* Ancho del ícono del menú hamburguesa */
-        height: 20px; /* Altura total para acomodar las tres rayas */
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after,
-    .navbar-toggler-icon div {
-        content: "";
-        display: block;
-        height: 2px; /* Grosor de las rayas del ícono */
-        background-color: #F4F1E8; /* Color de las rayas */
-        width: 100%; /* Ancho de las rayas */
-    }
-
-    .navbar-toggler-icon div {
-        margin: 0; /* Elimina márgenes entre las rayas */
+        background-image: none; /* Elimina la imagen SVG previa */
+        width: 30px;
+        height: 21px;
     }
 }
 
@@ -160,6 +168,65 @@ body {
     margin: 10px auto 0;
     animation: underlineSlideIn 1s forwards 3s;
 }
+
+.email-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+}
+
+.email-logo {
+    width: 60px;
+    height: auto;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: rotate(-45deg); /* Flecha apunta a la derecha */
+    margin-left: 10px;
+    animation: moveArrow 1s infinite;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0) rotate(-45deg);
+    }
+    50% {
+        transform: translateX(10px) rotate(-45deg);
+    }
+    100% {
+        transform: translateX(0) rotate(-45deg);
+    }
+}
+
+.mail {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-size: 18px;
+   
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .email-container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        margin: 10px 0;
+    }
+
+    .mail {
+        font-size: 0.9rem;
+    }
+}
+
+
 
 .decorations .decoration {
     position: absolute;

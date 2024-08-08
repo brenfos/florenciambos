@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
             home: "Inicio",
             studies: "Educación",
             services: "Servicios",
-            subtitles: "Subtitulados",
+            subtitles: "Subtitulado",
             publicTranslations: "Traducciones Públicas",
             contact: "Contacto",
             /*Inicio*/
-            hello: '¡Hola, Soy <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
+            hello: '¡Hola, soy <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
             inicioprofesion: "Soy Traductora Pública y Audiovisual",
             iniciospeach: "Traduce tus visiones al mundo. Da vida a tus creaciones audiovisuales.",
             inicioenes: "TRADUCCIONES INGLÉS - ESPAÑOL",
