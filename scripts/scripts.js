@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
             /*Inicio*/
             hello: '¡Hola, soy <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
             inicioprofesion: "Soy Traductora Pública y Audiovisual",
-            iniciospeach: "Traduce tus visiones al mundo. Da vida a tus creaciones audiovisuales.",
+            iniciospeach: "Traduce tus visiones al mundo. <br>Da vida a tus creaciones audiovisuales.",
+         
             inicioenes: "TRADUCCIONES INGLÉS - ESPAÑOL",
             /*Sobre mí*/
             abouttext: "Soy traductora Pública y Audiovisual. Recibida en la Universidad CAECE de Mar del Plata en el año 2013, y desde entonces me dedico activamente a la traducción. ",
@@ -97,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             /*Home*/
             hello: 'Hello, I am <span class="highlight">Flor!<svg class="brush-container" viewBox="0 0 250 150"><path id="brushPath" d="M30,75 Q60,20 120,20 T220,75 Q250,130 160,130 T30,60 Q10,30 90,30" fill="none" stroke="black" stroke-width="2" /></svg></span>',
             inicioprofesion: "I am an Audiovisual and Sworn Translator.",
-            iniciospeach: "Let's bring your stories to life, seamlessly bridging languages and cultures.",
+            iniciospeach: "Let's bring your stories to life,<br> seamlessly bridging languages and cultures.",
             inicioenes: "ENGLISH - SPANISH TRANSLATIONS",
             /*About me*/
             abouttext: "I am a Sworn and Audiovisual Translator, actively working since the year 2013.",
