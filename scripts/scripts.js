@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
             inicioprofesion: "Soy Traductora Pública y Audiovisual",
             iniciospeach: "Traduce tus visiones al mundo. <br>Da vida a tus creaciones audiovisuales.",
          
-            inicioenes: "Sobre mí",
+            inicioenes: "Traducciones Inglés - Español",
             /*Sobre mí*/
             abouttext: "Soy traductora Pública y Audiovisual. Recibida en la Universidad CAECE de Mar del Plata en el año 2013, y desde entonces me dedico activamente a la traducción. ",
-            abouttitle: "Traducciones Inglés - Español",
+            abouttitle: "Sobre mí",
             abouttext2: "¿Por qué elegí la traducción?",
             abouttext3: "Descubrí mi pasión por la lengua inglesa y la lingüística a muy temprana edad. Desde pequeña siempre consumí todo tipo de contenido en inglés, me interesaba escuchar cómo hablaban y entender culturas distintas a la mía. Lo primero que me cautivó de la lengua inglesa fue la música – me fascinaba entender lo que cantaban mis bandas favoritas, para mí era un superpoder. De adolescente, me empezó a maravillar el cine. <br> La magia de los subtítulos me permitió sumergirme aún más en mundos que, de otro modo, habrían permanecido separados. Esta fascinación por el cine y la música, junto con mi amor por el inglés, me llevaron a descubrir una carrera que une todas mis pasiones: la <strong>traducción audiovisual</strong>. <br>A lo largo de los años, he tenido el privilegio de trabajar en proyectos diversos que abarcan desde películas y series hasta videos empresariales y documentales, siempre con el objetivo de transmitir fielmente la esencia y el estilo del contenido original. Mi conocimiento de las diferentes culturas me permite localizar adecuadamente el contenido para la audiencia meta.<br> Mi formación académica y mi experiencia profesional me han permitido perfeccionar mis habilidades en este campo, y cada nuevo proyecto es una oportunidad para fusionar mi amor por la lengua y la cultura con mi deseo de conectar a personas de diferentes orígenes a través del poder de la traducción audiovisual.",
             abouttext4: "¿Cuál es mi especialización?",
