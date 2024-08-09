@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const textContent = {
         es: {
+            titlepag: "Florencia Ambos - Traductora Pública y Audiovisual",
             /*Navbar*/
             about: "Sobre mí",
             home: "Inicio",
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
             pcontact2: "Escribime o seguime:",
         },
         en: { 
+            titlepag :"Florencia Ambos - Audiovisual and Sworn Translator",
             /*Navbar*/
             about: "About Me",
             home: "Home",
@@ -253,8 +255,7 @@ const links = document.querySelectorAll('a[href^="#"]');
             });
         }
 
-        
-    
+            
         const servicesLink = document.querySelector('#servicesDropdown');
     
         servicesLink.addEventListener('click', function (event) {
@@ -273,23 +274,4 @@ const links = document.querySelectorAll('a[href^="#"]');
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function() {
-        function handleResize() {
-            const dropdownMenu = document.querySelector('#servicesMenu .dropdown-menu');
-            const servicesLink = document.querySelector('#servicesDropdown');
-            
-            if (window.innerWidth <= 985) {
-                // Oculta el submenú en pantallas pequeñas
-                dropdownMenu.style.display = 'none';
-            } else {
-                // Asegura que el submenú esté visible en pantallas grandes
-                dropdownMenu.style.display = '';
-            }
-        }
-    
-        // Llama a la función para aplicar el estado del submenú inicialmente
-        handleResize();
-    
-        // Añade un evento para manejar el cambio de tamaño de la ventana
-        window.addEventListener('resize', handleResize);
-    });
+ 

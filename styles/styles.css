@@ -11,7 +11,6 @@ body {
 }
 
 /*NAVBAR*/
-/* Estilos generales del navbar */
 .navbar {
     background-color: #9B4819;
     font-family: 'Radley', serif;
@@ -87,8 +86,9 @@ body {
 .navbar-toggler-icon::after {
     bottom: 0;
 }
-
-/* Estilos específicos para pantallas pequeñas */
+.nav-item a:hover {
+    color: rgb(192, 191, 191) !important;
+}
 @media (max-width: 985px) {
     .navbar-collapse {
         background-color: rgba(155, 72, 25, 0.8);
@@ -120,39 +120,27 @@ body {
     }
 
     .navbar-toggler-icon {
-        background-image: none; /* Elimina la imagen SVG previa */
+        background-image: none; 
         width: 30px;
         height: 21px;
     }
 
-    /* Ocultar el submenú y la flechita en pantallas pequeñas */
-    .dropdown-menu {
-        display: none; /* Oculta el submenú */
-    }
 
-    .dropdown-toggle::after {
-        display: none; /* Oculta la flechita */
-    }
-}
-
-    /* Eliminar la flecha del dropdown-toggle */
-    .navbar-nav .dropdown-toggle::after {
+   .navbar-nav .dropdown-toggle::after {
         display: none;
         appearance: none;
     }
 
-    /* Mostrar el dropdown al hacer hover */
-    .navbar-nav .dropdown:hover .dropdown-menu {
+        .navbar-nav .dropdown:hover .dropdown-menu {
         display: block;
     }
-
-/* Asegúrate de que el dropdown funcione bien en pantallas grandes */
+}
 @media (min-width: 986px) {
     .navbar-nav .dropdown-menu {
         position: absolute;
         display: none;
         float: none;
-        background-color: #9B4819; /* Mismo color de fondo que el navbar */
+        background-color: #9B4819; 
         padding-top: 10px;
         padding-bottom: 10px;
         top: 100%;
@@ -165,19 +153,19 @@ body {
     }
 }
 
-/* Estilo para los elementos dentro del dropdown al hacer hover */
+
 .navbar-nav .dropdown-menu .dropdown-item:hover {
-    color: #FFFFFF; /* Cambia el color de la fuente a blanco */
-    background-color: rgba(197, 168, 131, 0.8); /* Usar el color más claro para el hover */
+    color: #FFFFFF; 
+    background-color: rgba(197, 168, 131, 0.8); 
 }
 
 /* Evitar que el elemento quede marcado después de hacer clic */
 .navbar-nav .dropdown-menu .dropdown-item:focus,
 .navbar-nav .dropdown-menu .dropdown-item:active {
-    color: #F4F1E8; /* Color del texto */
-    background-color: #9B4819; /* Color de fondo igual que el navbar */
-    outline: none; /* Eliminar el outline */
-    box-shadow: none; /* Eliminar sombras adicionales */
+    color: #F4F1E8; 
+    background-color: #9B4819; 
+    outline: none; 
+    box-shadow: none; 
 }
 
 .dropdown-item {
@@ -1060,12 +1048,12 @@ body {
 }
 
 .brush-container {
-    width: 145%; /* Ajusta el ancho del SVG al 100% del contenedor */
-    height: auto; /* Mantiene la proporción del SVG */
+    width: 145%; 
+    height: auto; 
     position: absolute;
     top: 0;
     left: -68px;
-    transform: translateY(-20%); /* Ajusta según sea necesario */
+    transform: translateY(-20%);
 }
 
 @keyframes drawPath {
@@ -1098,32 +1086,32 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 30px 10px; /* Reduce el padding en pantallas más pequeñas */
+        padding: 30px 10px;
     }
 
     .hero-text h1 {
-        font-size: 2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+        font-size: 2rem; 
     }
 
     .profession {
-        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+        font-size: 1.2rem; 
     }
 
     .description {
-        font-size: 0.9rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+        font-size: 0.9rem; 
     }
 
     .specialty {
-        font-size: 1.2rem; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+        font-size: 1.2rem; 
     }
 
     .underline {
-        width: 70%; /* Ajusta el ancho para pantallas más pequeñas */
+        width: 70%; 
     }
 
     .logo-container {
-        top: 2px; /* Ajusta la posición del logo en pantallas más pequeñas */
-        width: 60px; /* Ajusta el tamaño del logo en pantallas más pequeñas */
+        top: 2px; 
+        width: 60px; 
     }
 
     .brush-container {
@@ -1135,10 +1123,7 @@ body {
     }
 
     #brushPath {
-        stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
+        stroke-width: 1.5; 
     }
 }
 
-.nav-item a:hover {
-    color: rgb(192, 191, 191) !important;
-}
