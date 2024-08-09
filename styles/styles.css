@@ -16,8 +16,9 @@ body {
     background-color: #9B4819;
     font-family: 'Radley', serif;
     font-size: 20px;
-    height: 50px;
+    height: 60px;
 }
+
 
 .navbar-nav .nav-link {
     margin: 0 15px;
@@ -25,6 +26,7 @@ body {
     font-family: 'Radley', serif;
     font-size: 18px;
 }
+
 
 .navbar.fixed-top {
     position: fixed;
@@ -43,7 +45,7 @@ body {
 
 .btn-container .btn {
     background-color: transparent;
-    color: #F4F1E8;
+    color: #ffffff;
     border: 1px solid #F4F1E8;
     font-family: 'Radley', serif;
 }
@@ -90,10 +92,12 @@ body {
 @media (max-width: 985px) {
     .navbar-collapse {
         background-color: rgba(155, 72, 25, 0.8);
+        margin-top: 3%;
     }
 
     .navbar-nav .nav-link {
         color: #F4F1E8;
+    
     }
 
     .navbar-nav .nav-link:hover {
@@ -130,6 +134,56 @@ body {
         display: none; /* Oculta la flechita */
     }
 }
+
+    /* Eliminar la flecha del dropdown-toggle */
+    .navbar-nav .dropdown-toggle::after {
+        display: none;
+        appearance: none;
+    }
+
+    /* Mostrar el dropdown al hacer hover */
+    .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+/* Asegúrate de que el dropdown funcione bien en pantallas grandes */
+@media (min-width: 986px) {
+    .navbar-nav .dropdown-menu {
+        position: absolute;
+        display: none;
+        float: none;
+        background-color: #9B4819; /* Mismo color de fondo que el navbar */
+        padding-top: 10px;
+        padding-bottom: 10px;
+        top: 100%;
+        left: 0;
+        margin-top: 0;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0px !important;
+    }
+}
+
+/* Estilo para los elementos dentro del dropdown al hacer hover */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #FFFFFF; /* Cambia el color de la fuente a blanco */
+    background-color: rgba(197, 168, 131, 0.8); /* Usar el color más claro para el hover */
+}
+
+/* Evitar que el elemento quede marcado después de hacer clic */
+.navbar-nav .dropdown-menu .dropdown-item:focus,
+.navbar-nav .dropdown-menu .dropdown-item:active {
+    color: #F4F1E8; /* Color del texto */
+    background-color: #9B4819; /* Color de fondo igual que el navbar */
+    outline: none; /* Eliminar el outline */
+    box-shadow: none; /* Eliminar sombras adicionales */
+}
+
+.dropdown-item {
+    color: #FFFFFF !important;
+}
+
 
 /*HOME*/
 .logo-container {
@@ -254,7 +308,12 @@ body {
         font-size: 0.9rem;
         margin-right: 40px;
     }
+    .email-container {
+        display: none;
+    }
 }
+
+
 
 
 
@@ -440,8 +499,11 @@ body {
     font-size: 35px;
     margin-top: 9%;
     margin-bottom: 3%;
-
-
+}
+@media (max-width: 768px){
+    .tittle-about{
+        margin-top: 15%;
+    }
 }
 
 .textabout{
@@ -1075,4 +1137,8 @@ body {
     #brushPath {
         stroke-width: 1.5; /* Asegura que el trazo sea visible en pantallas más pequeñas */
     }
+}
+
+.nav-item a:hover {
+    color: rgb(192, 191, 191) !important;
 }
