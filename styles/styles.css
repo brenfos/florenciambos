@@ -928,7 +928,7 @@ body {
 .bgimage {
     background-color: #9b4819;
     width: 100%;
-    height: 100vh; 
+    height: 103vh; 
     background-image: url('../media/backgroundimg.png'); 
     background-size: cover; 
     background-position: center; 
@@ -944,6 +944,30 @@ body {
 
 @media (max-width: 768px) {
     .bgimage {
+        background-size: contain;
+        height: 200px;
+    }
+}
+
+.bgimage2 {
+    background-color: #9b4819;
+    width: 100%;
+    height: 103vh; 
+    background-image: url('../media/backgroundimg2.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .bgimage2 {
         background-size: contain;
         height: 200px;
     }
